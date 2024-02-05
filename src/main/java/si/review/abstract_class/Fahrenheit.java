@@ -1,4 +1,4 @@
-package unit03;
+package si.review.abstract_class;
 
 public class Fahrenheit extends Thermometer {
         public Fahrenheit(double degrees) {
