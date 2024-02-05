@@ -8,6 +8,6 @@ module si {
     exports si;
     exports si.reversi.model;
     exports si.reversi.view;
-    exports si.ttt.model;
-    exports si.ttt.view;
+    exports si.tic_tac_toe.model;
+    exports si.tic_tac_toe.view;
 }

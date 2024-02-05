@@ -1,4 +1,4 @@
-package si.ttt.model;
+package si.tic_tac_toe.model;
 
 /**
  * Represents the possible states of a game of Tic-Tac-Toe.

@@ -1,4 +1,4 @@
-package si.ttt.model;
+package si.tic_tac_toe.model;
 
 /**
  * Implements a simple game of Tic Tac Toe.

@@ -1,9 +1,9 @@
 package si.review.interface_class;
 
-public class Dog implements Animal {
+public class Cat implements Animal {
     @Override
     public String speak() {
-        return "Woof!";
+        return "Meow!";
     }
 }
 

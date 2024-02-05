@@ -1,10 +1,10 @@
-package si.ttt.view;
+package si.tic_tac_toe.view;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-import si.ttt.model.TicTacToe;
-import si.ttt.model.TicTacToeException;
+import si.tic_tac_toe.model.TicTacToe;
+import si.tic_tac_toe.model.TicTacToeException;
 
 /**
  * Provides a simple command-line-interface (CLI) for playing a game of 
