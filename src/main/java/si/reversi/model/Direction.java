@@ -1,4 +1,4 @@
-package unit04.reversi.model;
+package si.reversi.model;
 
 /**
  * Used to indicate a search direction.

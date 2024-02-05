@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>unit04</groupId>
-    <artifactId>unit04</artifactId>
+    <groupId>si</groupId>
+    <artifactId>si</artifactId>
     <version>1</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -50,73 +50,73 @@
                     <execution>
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>unit04/unit04.HelloFX</mainClass>
+                            <mainClass>si/si.HelloFX</mainClass>
                         </configuration>
                     </execution>
                     <execution>
                         <id>LabelActivity</id>
                         <configuration>
-                            <mainClass>unit04/unit04.LabelActivity</mainClass>
+                            <mainClass>si/si.LabelActivity</mainClass>
                         </configuration>
                     </execution>
                     <execution>
                         <id>BorderPaneActivity</id>
                         <configuration>
-                            <mainClass>unit04/unit04.BorderPaneActivity</mainClass>
+                            <mainClass>si/si.BorderPaneActivity</mainClass>
                         </configuration>
                     </execution>
                     <execution>
                         <id>GridPaneActivity</id>
                         <configuration>
-                            <mainClass>unit04/unit04.GridPaneActivity</mainClass>
+                            <mainClass>si/si.GridPaneActivity</mainClass>
                         </configuration>
                     </execution>
                     <execution>
                         <id>NameTag</id>
                         <configuration>
-                            <mainClass>unit04/unit04.NameTag</mainClass>
+                            <mainClass>si/si.NameTag</mainClass>
                         </configuration>
                     </execution>
                     <execution>
                         <id>ImageViewer</id>
                         <configuration>
-                            <mainClass>unit04/unit04.ImageViewer</mainClass>
+                            <mainClass>si/si.ImageViewer</mainClass>
                         </configuration>
                     </execution>
                     <execution>
                         <id>StackPaneActivity</id>
                         <configuration>
-                            <mainClass>unit04/unit04.StackPaneActivity</mainClass>
+                            <mainClass>si/si.StackPaneActivity</mainClass>
                         </configuration>
                     </execution>
                     <execution>
                         <id>PacMan</id>
                         <configuration>
-                            <mainClass>unit04/unit04.PacMan</mainClass>
+                            <mainClass>si/si.PacMan</mainClass>
                         </configuration>
                     </execution>
                     <execution>
                         <id>GrowingGraphics</id>
                         <configuration>
-                            <mainClass>unit04/unit04.GrowingGraphics</mainClass>
+                            <mainClass>si/si.GrowingGraphics</mainClass>
                         </configuration>
                     </execution>
                     <execution>
                         <id>ReversiGUI</id>
                         <configuration>
-                            <mainClass>unit04/unit04.reversi.view.ReversiGUI</mainClass>
+                            <mainClass>si/si.reversi.view.ReversiGUI</mainClass>
                         </configuration>
                     </execution>
                     <execution>
                         <id>MyPod</id>
                         <configuration>
-                            <mainClass>unit04/unit04.mypod.MyPod</mainClass>
+                            <mainClass>si/si.mypod.MyPod</mainClass>
                         </configuration>
                     </execution>
                     <execution>
                         <id>ConnectFourGUI</id>
                         <configuration>
-                            <mainClass>unit04/unit04.connectfour.view.ConnectFourGUI</mainClass>
+                            <mainClass>si/si.connectfour.view.ConnectFourGUI</mainClass>
                         </configuration>
                     </execution>
                 </executions>

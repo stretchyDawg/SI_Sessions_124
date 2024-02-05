@@ -1,9 +1,9 @@
-package unit04.reversi.view;
+package si.reversi.view;
 
 import java.util.Scanner;
 
-import unit04.reversi.model.Reversi;
-import unit04.reversi.model.ReversiException;
+import si.reversi.model.Reversi;
+import si.reversi.model.ReversiException;
 
 /**
  * A simple command line interface for playing a game of Reversi.

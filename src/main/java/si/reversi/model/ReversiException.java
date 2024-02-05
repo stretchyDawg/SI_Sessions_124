@@ -1,4 +1,4 @@
-package unit04.reversi.model;
+package si.reversi.model;
 
 /**
  * An exception indicating that a player attempted to make a bad move.
