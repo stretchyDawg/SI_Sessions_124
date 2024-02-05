@@ -1,4 +1,4 @@
-package unit04;
+package si;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

@@ -1,4 +1,4 @@
-package unit01;
+package si;
 
 import java.util.Scanner;
 
