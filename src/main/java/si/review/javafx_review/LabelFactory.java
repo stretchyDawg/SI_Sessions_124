@@ -1,4 +1,4 @@
-package unit04;
+package si.review.javafx_review;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;

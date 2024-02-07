@@ -57,9 +57,9 @@ public class LabelProperties extends Application{
         label.setMaxWidth(Double.MAX_VALUE);
         label.setPadding(new Insets(40));             
         label.setTextFill(Color.BLACK);
-        label.setBackground(new Background(new BackgroundFill(Color.ORANGE, new CornerRadii(25), new Insets(4))));        // <------ I AM CHANGING THIS VALUE  
+        label.setBackground(new Background(new BackgroundFill(Color.ORANGE, new CornerRadii(25), new Insets(4))));        
         label.setAlignment(Pos.CENTER);
-        label.setBorder(border);
+        label.setBorder(border);     // <------ I AM CHANGING THIS VALUE  
         
         return label;   
     }
