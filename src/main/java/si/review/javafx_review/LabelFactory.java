@@ -15,13 +15,28 @@ import javafx.stage.Stage;
 
 public class LabelFactory extends Application{
 
-    private static Label makeLabel(String text, Color textColor, Color backgroundColor) {
+    @SuppressWarnings("exports")
+    public static Label makeLabel(String text, Color textColor, Color backgroundColor) {
         Label label = new Label(text);
         label.setFont(new Font("Arial", 24));
         label.setMaxWidth(Double.MAX_VALUE);
         label.setPadding(new Insets(40));
         label.setTextFill(textColor);
-        label.setBackground(new Background(new BackgroundFill(backgroundColor, new CornerRadii(100), new Insets(30))));    
+        label.setBackground(new Background(new BackgroundFill(backgroundColor, new CornerRadii(10), new Insets(0))));    
+        label.setAlignment(Pos.CENTER);
+        
+        return label;   
+    }
+
+    @SuppressWarnings("exports")
+    public static Label makeLabel(String text, Color backgroundColor) {
+        Color textColor = Color.BLACK;
+        Label label = new Label(text);
+        label.setFont(new Font("Arial", 24));
+        label.setMaxWidth(Double.MAX_VALUE);
+        label.setPadding(new Insets(40));
+        label.setTextFill(textColor);
+        label.setBackground(new Background(new BackgroundFill(backgroundColor, new CornerRadii(10), new Insets(5))));    
         label.setAlignment(Pos.CENTER);
         
         return label;   

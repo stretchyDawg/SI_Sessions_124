@@ -10,4 +10,7 @@ module si {
     exports si.reversi.view;
     exports si.tic_tac_toe.model;
     exports si.tic_tac_toe.view;
+    exports si.review.javafx_review;
+    exports si.review.javafx_review.containers;
+
 }

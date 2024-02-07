@@ -1,4 +1,4 @@
-package si.review.javafx_review;
+package si.review.javafx_review.containers;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
