@@ -12,5 +12,5 @@ module si {
     exports si.tic_tac_toe.view;
     exports si.review.javafx_review;
     exports si.review.javafx_review.containers;
-
+    exports si.review.javafx_review.user_input;
 }
