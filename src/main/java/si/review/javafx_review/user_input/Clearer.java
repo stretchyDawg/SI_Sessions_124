@@ -1,4 +1,4 @@
-package unit04;
+package si.review.javafx_review.user_input;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -10,6 +10,7 @@ public class Clearer implements EventHandler<ActionEvent>{
     private final Label label;
     private final TextField textField;
 
+    @SuppressWarnings("exports")
     public Clearer(String defaultText, Label label,TextField textField) {
         this.defaultText = defaultText;
         this.label = label;

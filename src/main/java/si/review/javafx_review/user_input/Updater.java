@@ -9,6 +9,7 @@ public class Updater implements EventHandler<ActionEvent>{
     private final Label label;
     private final TextField textField;
 
+    @SuppressWarnings("exports")
     public Updater(Label label,TextField textField) {
         this.label = label;
         this.textField = textField;
