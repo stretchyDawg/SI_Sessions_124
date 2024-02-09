@@ -11,14 +11,17 @@ public class BasicButton extends Application{
     @Override
     public void start(Stage primaryStage) throws Exception {
         Label numberLabel = new Label("0");
+        numberLabel.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
         Button basicButton = new Button("Increment :)");
+        basicButton.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
+        basicButton.setOnAction(new Increment(numberLabel));
         
         VBox vBox = new VBox();
         vBox.getChildren().addAll(
             numberLabel,    
             basicButton
         );
-        
+
         Scene scene = new Scene(vBox);
         primaryStage.setTitle("Basic Button Activity");
         primaryStage.setScene(scene);
