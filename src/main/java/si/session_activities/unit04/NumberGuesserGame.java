@@ -47,11 +47,14 @@ public class NumberGuesserGame extends Application{
             
         submitGuess.setOnAction(new NumberGuesserHandler(randomInt, input, amountOfGuesses, guessCount, outcome));
 
+        Label answer = new Label("Answer (for testing purposes): " + String.valueOf(randomInt));
+
         VBox vBox = new VBox();
         vBox.getChildren().addAll(
             input,
             displayHBox,
-            outcome
+            outcome,
+            answer
         );
 
         Scene scene = new Scene(vBox);

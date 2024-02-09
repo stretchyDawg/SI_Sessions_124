@@ -30,19 +30,25 @@ public class NumberGuesserHandler implements EventHandler<ActionEvent>{
     @Override
     public void handle(ActionEvent event) {
         try {
-            if(this.amountOfGuesses == 0 || Integer.parseInt(this.inputLabel.getText()) == this.randomInt){
+            if(this.amountOfGuesses == 0){
+                this.outcomeLabel.setText("Stop trying... YOU LOST!");
+                this.outcomeLabel.setBackground(new Background(new BackgroundFill(Color.RED, new CornerRadii(25), new Insets(4)))); 
                 return;
             }
-            else{
-                this.amountOfGuesses = this.amountOfGuesses-1;
-                this.guessLabel.setText("   Available Guesses: " + String.valueOf(amountOfGuesses));
-    
+            else{    
                 if(Integer.parseInt(this.inputLabel.getText()) == this.randomInt){
                     this.outcomeLabel.setText("YOU WIN! You guessed correctly :)");
                     this.outcomeLabel.setBackground(new Background(new BackgroundFill(Color.YELLOW, new CornerRadii(25), new Insets(4))));   
                     return;   
                 }
-                else if(Integer.parseInt(this.inputLabel.getText()) == this.randomInt){
+                else if(Integer.parseInt(this.inputLabel.getText()) != this.randomInt){
+                    this.amountOfGuesses = this.amountOfGuesses-1;
+                    this.guessLabel.setText("   Available Guesses: " + String.valueOf(amountOfGuesses));
+                    if(this.amountOfGuesses == 0){
+                        this.outcomeLabel.setText("YOU LOST! You ran out of guesses :(");
+                        this.outcomeLabel.setBackground(new Background(new BackgroundFill(Color.RED, new CornerRadii(25), new Insets(4)))); 
+                        return;
+                    }
                     this.outcomeLabel.setText("Nope! Try again.");
                     return;
                 }
