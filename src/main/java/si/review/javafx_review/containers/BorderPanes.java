@@ -18,7 +18,7 @@ public class BorderPanes extends Application{
         pane.setRight(LabelFactory.makeLabel("Right", Color.LIGHTBLUE));
         pane.setCenter(LabelFactory.makeLabel("Center", Color.CORAL));
         Scene scene = new Scene(pane);
-        primaryStage.setTitle("Boxes Activity");
+        primaryStage.setTitle("BorderPanes Activity");
         primaryStage.setScene(scene);
         primaryStage.show();
     }

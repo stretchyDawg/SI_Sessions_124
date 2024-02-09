@@ -27,7 +27,7 @@ public class GridPanes extends Application{
         GridPane gridPane = gridPaneFactory(5, 3);
         
         Scene scene = new Scene(gridPane);
-        primaryStage.setTitle("Boxes Activity");
+    primaryStage.setTitle("GridPanes Activity");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
