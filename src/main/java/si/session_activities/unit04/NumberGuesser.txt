@@ -1,0 +1,15 @@
+NUMBER GUESSER GAME:
+How to play:
+- I pick a number from 0-100, you have to guess my number.
+- You have 5 tries to get it. If you fail to do it in 5 tries, you lose.
+(A bit different from the Number Guessing Tournament we did earlier, you don't get infinite tries and there are no hints).
+
+HOW TO CODE NUMBER GUESSER GAME:
+- Generate some random number (int) between 0-100.
+- Create a TextField that enables a User to enter a guess.
+- Create a "Guess" button & event handler that checks if the entered value is correct.
+- Create a guess display Label that displays the amount of available guesses you have.
+- Create an outcome Label that represents the outcome once you finish the game.
+- If the amount of available guesses reaches zero, do not let the user enter submit a guess.
+- If the User wins, display a cool winning sound!
+
