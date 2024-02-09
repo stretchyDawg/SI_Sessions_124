@@ -11,8 +11,8 @@ public class ImageExample extends Application {
     
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Image image = new Image("file:media/images/sunflowers.jpg");
-        ImageView view = new ImageView(image);
+        Image image = new Image("file:media/images/smb.gif");  // Holds Image
+        ImageView view = new ImageView(image);                 // Converts Image to viewable format (still must contain)
         HBox box = new HBox();
         box.getChildren().add(view);
 
@@ -24,6 +24,6 @@ public class ImageExample extends Application {
 
     
     public static void main(String[] args) {
-        
+        launch(args);
     }
 }
