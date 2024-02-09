@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 public class Grows extends Application{
     private static final String IMG_DIR = "file:media/images/smb/";
 
+    @SuppressWarnings("exports")
     public Label makeLabel(String text,String imagePath) {
         ImageView imageView = new ImageView(imagePath);
 
@@ -26,6 +27,7 @@ public class Grows extends Application{
         return label;
     }
 
+    @SuppressWarnings("exports")
     public Button makeButton(String text,String imagePath) {
         ImageView imageView = new ImageView(imagePath);
 
