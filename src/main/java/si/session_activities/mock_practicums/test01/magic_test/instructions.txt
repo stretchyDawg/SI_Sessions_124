@@ -1,0 +1,118 @@
+0. You are required to write a class JavaDoc with your name at the top of each
+   file that you create. You are not required to write any other comments 
+   unless you feel that it is useful to do so. You are expected to follow best
+   practices with respect to naming conventions and encapsulation. 
+
+   Create a class named Hogwarts in the practicum1 package that defines a main 
+   method with the appropriate signature. Use this method to manually test your
+   other classes.
+
+
+1. (10 points) A Quidditch player plays one of the following positions: Beater, 
+   Chaser, Keeper, or Seeker. Create a new Java type to represent a Quidditch 
+   position.
+
+
+2. (15 points) A Hogwarts student is sorted into one of four houses, each of 
+   which is associated with a specific behavioral characteristic:
+
+   - Gryffindor: Bravery
+   - Hufflepuff: Empathy
+   - Ravenclaw: Intelligence
+   - Slytherin: Ambition
+
+   Create a new Java type to represent one of the Hogwarts houses. Given a 
+   value of the House type it should be possible to access its characteristic.
+
+
+3. (35 points) A Hogwarts student has the following attributes and behavior:
+ 
+    - A name, a year level, and a house.
+    - A student is created with a name and a house and the year level is set to
+      a default value of 1.
+    - Accessors for all of the student's attributes.
+    - A method that can be used to get the year level as a string with the 
+      appropriate suffix, e.g. "2nd" or "6th".
+    - At the end of each year the student advances and their year level is 
+      increased by one up to a maximum of 7. To be clear, the year level cannot
+      be set to an arbitrary value at any time, but can only be advanced by one
+      year at a time.
+    - Two students are considered equal if they are in the same house and are
+      at the same year level.
+    - The string representation of a student should match the format: 
+    
+      "<name>, a <year level with suffix> student in <house name> house"
+      
+      For example: 
+
+      "Harry Potter, a 2nd year student in Gryffindor house.  
+
+
+4. (25 points) A Quidditch player is a Hogwarts student that has the following
+   additional attributes and behavior:
+
+   - A position.
+   - A Quidditch player is created with a name, a house, and a position.
+   - An accessor for the position.
+   - Two Quiddich player's are considered equal if they play the same position
+     regardless of their house or year level.
+   - The string representation of a Quidditch player should match the format:
+
+     "<name>, a <year level with suffix> year <position> for the <house name> 
+     Quidditch team" 
+     
+     For example: 
+
+     "Roger Davies, a 6th year Chaser for the Ravenclaw Quidditch team."
+
+
+5. (15 points) You have been provided with a file containing a roster of 
+   Hogwarts Quidditch players. The first line in the file contains the number 
+   of players on the roster. Each remaining line is in the format:
+
+   Name,Position,House,Year 
+
+   For example:
+
+   Oliver Wood,Keeper,Gryffindor,6
+
+   Add a static method to the Quidditch Player class that declares a parameter
+   for a filename and returns an array of Quidditch players that have been
+   parsed from the file. For full credit, you must ensure that the file is 
+   closed when you are finished.
+
+   You may assume that the file is properly formatted and contains the correct
+   number and format of players in the roster. If any exceptions do occur, 
+   print an error message and return null.
+
+   The following is example output after reading the entire roster from the
+   provided file and printing the players in order to standard output:
+
+  Tasmin Applebee, a 7th year Chaser for the Hufflepuff Quidditch team.
+  Katie Bell, a 4th year Chaser for the Gryffindor Quidditch team.
+  Miles Bletchley, a 6th year Keeper for the Slytherin Quidditch team.
+  Lucian Bole, a 3rd year Beater for the Slytherin Quidditch team.
+  Randolph Burrow, a 1st year Chaser for the Ravenclaw Quidditch team.
+  Cho Chang, a 2nd year Seeker for the Ravenclaw Quidditch team.
+  Roger Davies, a 6th year Chaser for the Ravenclaw Quidditch team.
+  Peregrine Derrick, a 4th year Beater for the Slytherin Quidditch team.
+  Cedric Diggory, a 7th year Seeker for the Hufflepuff Quidditch team.
+  Herbert Fleet, a 6th year Keeper for the Hufflepuff Quidditch team.
+  Marcus Flint, a 6th year Chaser for the Slytherin Quidditch team.
+  Duncan Inglebee, a 2nd year Beater for the Ravenclaw Quidditch team.
+  Angelina Johnson, a 3rd year Chaser for the Gryffindor Quidditch team.
+  Heidi Macavoy, a 4th year Chaser for the Hufflepuff Quidditch team.
+  Draco Malfoy, a 2nd year Seeker for the Slytherin Quidditch team.
+  Graham Montague, a 3rd year Chaser for the Slytherin Quidditch team.
+  Maxine O'Flaherty, a 2nd year Beater for the Hufflepuff Quidditch team.
+  Grant Page, a 3rd year Keeper for the Ravenclaw Quidditch team.
+  Harry Potter, a 2nd year Seeker for the Gryffindor Quidditch team.
+  Malcolm Preece, a 2nd year Chaser for the Hufflepuff Quidditch team.
+  Anthony Rickett, a 5th year Beater for the Hufflepuff Quidditch team.
+  Jason Samuels, a 4th year Beater for the Ravenclaw Quidditch team.
+  Alicia Spinnet, a 5th year Chaser for the Gryffindor Quidditch team.
+  Jeremy Stretton, a 2nd year Chaser for the Ravenclaw Quidditch team.
+  Cassius Warrington, a 3rd year Chaser for the Slytherin Quidditch team.
+  Fred Weasley, a 3rd year Beater for the Gryffindor Quidditch team.
+  George Weasley, a 3rd year Beater for the Gryffindor Quidditch team.
+  Oliver Wood, a 6th year Keeper for the Gryffindor Quidditch team.
