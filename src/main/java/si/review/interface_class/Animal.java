@@ -7,6 +7,6 @@ public interface Animal {
        return KINGDOM;
     }
     
-    String speak();    
+    String speak();  
 }
     

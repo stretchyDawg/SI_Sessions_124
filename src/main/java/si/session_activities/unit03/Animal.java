@@ -34,10 +34,4 @@ public class Animal {
     public void eat(){
         System.out.println(this.name + " eats some food!");
     }
-
-    @Override
-    public String toString(){
-        return "Animal[name=" + this.name + ", weight=" + this.weight + "]";
-    }
 }
-

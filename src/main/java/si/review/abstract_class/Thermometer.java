@@ -20,5 +20,10 @@ public abstract class Thermometer {
     public abstract double getBoilingPoint();
   
     public abstract char getScale();
+
+    @Override
+    public String toString(){
+      return "Toy string ";
+    }
 }
   
