@@ -1,0 +1,115 @@
+SPOTIFY: Midterm 1 Mock Practical
+Made by: Christian Morgado & Faria Sultana
+
+Midterm 1 Topics:
+- File Parsing
+- JUnit Tests
+- UML Diagrams
+- Enums
+    - Complex Enums
+- Inheritance
+    - Parent & Child Classes
+    - Abstract classes
+    - Interfaces
+
+Topics covered by this mock practicum:
+- File Parsing
+- JUnit Tests
+- UML Diagrams
+- Enums
+    - Complex Enums (as a bonus question)
+- Inheritance
+    - Parent & Child Classes
+
+If you would like a smaller mock practicum that cover abstract 
+classes & interfaces, talk to Christian after this session. 
+In the interest of time, you can take those on your own.
+--------------------------------------------------------------
+
+0. Create a separate directory for this practicum in whatever repo you want (can even
+   be your github classroom repos). You are not required to any JavaDocs unless 
+   you feel like it helps you. You are expected to follow best practices with naming 
+   conventions (pick good variable names).
+
+   Create a class named SongMain in your directory that defines a main method with the 
+   appropriate signature. Use this method to manually test your other classes.
+
+
+1. A Genre is some genre of music that a song can have. These are the required
+   genres: Pop, Rap, Hip-Hop, Rock and Roll, and Jazz. You may add additional 
+   genres. Create a new Java enum type to represent genres.
+
+   Bonus: Create a String field for the Genre enum and make string representation 
+       of a genre return that field. For example, for a PUNKROCK enum field:
+          PUNKROCK("Punk Rock")
+       
+       When printing Genre.PUNKROCK, it would print "Punk Rock".
+    
+       If this confuses you, skip it, if we have enough time we'll go over it.
+
+
+2. A Song has the following attributes and behavior:
+    - A title (string), author (string), genre, and a runtime in seconds (int).
+    - A Song is created with a title, author and runtime as parameters in its constructor.
+    - Songs have accessors for each of its fields.
+    - A method that can be used to get the runtime as a string in this format:
+        - "Runtime: 2 seconds" or "Runtime: 79 seconds" etc...
+    - Two Songs are considered equal if they have the same title, author and runtime.
+    - The string representation of a Song should match the format: 
+       "<title> by <author>: <runtime> seconds, Genre: <genre>"
+      
+      For example: 
+      "Weird Girl by Mommy Long Legs: 144 seconds, Genre: Punk Rock"  
+
+2a. Create two JUnit tests for the Song class. You can test whatever you want. 
+
+
+3. Songs in real life can be released as Singles, or in Albums. To represent this
+   in your code, create three new Java classes that inherit from the Song class 
+   in some way:
+
+   - SingleSong:
+        - Not much changes. Only difference is (Single) is appended onto the toString() method.
+        - For example:
+            - If this song was a SingleSong, it would go from this:
+                "Weird Girl by Mommy Long Legs: 144 seconds"  
+              To this:
+                "Weird Girl by Mommy Long Legs: 144 seconds, Genre: Punk Rock (Single)"  
+
+   - AlbumSong:
+        - AlbumSongs have one new field, the album title field (string).
+        - There is an accessor for this field. 
+        - The string representation changes from this:
+            "<title> by <author>: <runtime> seconds, Genre: <genre>"
+          To this:
+            "<title> by <author> from <albumName>: <runtime> seconds, Genre: <genre>"
+          For example:
+            "Weird Girl by Mommy Long Legs from Assholes: 144 seconds Genre: Punk Rock"
+        - Two AlbumSongs are considered equal if they have the same title, album title, author and runtime.
+
+3a: Create one JUnit test for both the SingleSong class and the AlbumSong class. 
+
+
+4: You have been provided with a text file containing a comma separated collection 
+   of songs. If you have gone to Christian's SI Sessions, you'll notice some familiar 
+   songs. The first line in the file is how many songs there are. Each remaining line
+   is in the format:
+
+   Title,Author,Runtime,Genre,Album/Single,AlbumName
+   For example:
+   AlbumSongs: Weird Girl, Mommy Long Legs, 144, Punk Rock, Album, Assholes
+   SingleSongs: Lumberjack, Tyler the Creator, 138, Alternative Hip-Hop, Single
+
+   Add a static method to the SongMain class that declares a parameter
+   for a filename and returns an array of Songs that have been parsed 
+   and instantiated from the file. Make sure the file is closed.
+
+   You may assume that the file is properly formatted and contains the correct
+   number and format of players in the roster. If any exceptions do occur, 
+   print an error message and return null.
+
+   Iterate through the array and print out every single Song inside of it.
+
+
+5: Draw UML Diagrams for every single class you have made (except for SongMain).
+   You can use draw.io, lucidchart or just a plain piece of paper for this. 
