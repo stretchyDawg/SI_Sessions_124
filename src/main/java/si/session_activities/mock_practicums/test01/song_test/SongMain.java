@@ -21,7 +21,7 @@ public class SongMain {
                 String title = splitLine[0];
                 String author = splitLine[1];
                 int runtime = Integer.parseInt(splitLine[2]);
-                String genreString = splitLine[3];
+                // String genreString = splitLine[3];
                 String albumOrSingle = splitLine[4];
                 if(albumOrSingle.equals("Album")){
                     String albumTitle = splitLine[5];
