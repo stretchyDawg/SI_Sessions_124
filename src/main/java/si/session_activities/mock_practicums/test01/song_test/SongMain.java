@@ -5,17 +5,43 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class SongMain {
+public class SongMain {    
     public static Song[] getSongs(String filename) throws FileNotFoundException, IOException{
         try(FileReader fw = new FileReader(filename); BufferedReader br = new BufferedReader(fw);){
-            
-            Song[] songArray = new Song[10];
+            String line = br.readLine();
+            int length = Integer.parseInt(line);
+            Song[] songArray = new Song[length];
 
+            for(int i = 0; i < songArray.length; i++){
+                line = br.readLine();
+                // Lumberjack,Tyler the Creator,138,Hip-Hop,Single
+                // Weird Girl,Mommy Long Legs,144,Punk Rock,Album,Assholes
+                String[] splitLine = line.split("[,]");
+
+                String title = splitLine[0];
+                String author = splitLine[1];
+                int runtime = Integer.parseInt(splitLine[2]);
+                String genreString = splitLine[3];
+                String albumOrSingle = splitLine[4];
+                if(albumOrSingle.equals("Album")){
+                    String albumTitle = splitLine[5];
+                    AlbumSong albumSong = new AlbumSong(title, author, null, runtime, albumTitle);
+                    songArray[i] = albumSong;
+                }
+                else if(albumOrSingle.equals("Single")){
+                    SingleSong singleSong = new SingleSong(title, author, null, runtime);
+                    songArray[i] = singleSong;
+                }
+            }
             return songArray;
         }
     }
     
-    public static void main(String[] args) {
-        
+    public static void main(String[] args) throws FileNotFoundException, IOException {
+        System.out.println();
+        Song[] songs = getSongs("C:/songs.txt");
+        for(Song song : songs){
+            System.out.println(song);
+        }
     }
 }

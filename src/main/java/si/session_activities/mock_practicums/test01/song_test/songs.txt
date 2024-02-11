@@ -1,0 +1,9 @@
+8
+Lumberjack,Tyler the Creator,138,Hip-Hop,Single
+Weird Girl,Mommy Long Legs,144,Punk Rock,Album,Assholes
+mona lisa,mxmtoon,190,Lo-fi,Album,rising
+Mona lisa,Dominic Fike,186,R&B,Album,Sunburn
+Алые цветы,EXILED,130,EDM,Single
+Video,Jane Remover,523,EDM,Album,Census Designated
+Lofi Songs,Jameson Wang,100,Lo-fi,Album,Jameson's Lofi Playlist
+CLASSY 101,Feid,196,Hip-hop,Single
