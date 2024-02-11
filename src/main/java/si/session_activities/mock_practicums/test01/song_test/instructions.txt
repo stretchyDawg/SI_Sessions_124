@@ -3,6 +3,7 @@ Made by: Christian Morgado & Faria Sultana
 
 Midterm 1 Topics:
 - File Parsing
+- Scanner
 - JUnit Tests
 - UML Diagrams
 - Enums
@@ -23,7 +24,8 @@ Topics covered by this mock practicum:
 
 If you would like a smaller mock practicum that cover abstract 
 classes & interfaces, talk to Christian after this session. 
-In the interest of time, you can take those on your own.
+In the interest of time, you can take that exam on your own 
+after this session.
 --------------------------------------------------------------
 
 0. Create a separate directory for this practicum in whatever repo you want (can even
