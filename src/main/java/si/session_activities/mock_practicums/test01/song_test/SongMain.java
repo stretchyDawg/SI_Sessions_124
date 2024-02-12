@@ -14,14 +14,12 @@ public class SongMain {
 
             for(int i = 0; i < songArray.length; i++){
                 line = br.readLine();
-                // Lumberjack,Tyler the Creator,138,Hip-Hop,Single
-                // Weird Girl,Mommy Long Legs,144,Punk Rock,Album,Assholes
                 String[] splitLine = line.split("[,]");
 
                 String title = splitLine[0];
                 String author = splitLine[1];
                 int runtime = Integer.parseInt(splitLine[2]);
-                // String genreString = splitLine[3];
+                // String genreString = splitLine[3]; If statements for assigning genres.
                 String albumOrSingle = splitLine[4];
                 if(albumOrSingle.equals("Album")){
                     String albumTitle = splitLine[5];

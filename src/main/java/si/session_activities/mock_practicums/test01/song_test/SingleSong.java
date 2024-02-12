@@ -10,3 +10,7 @@ public class SingleSong extends Song {
         return super.toString() + " (Single)";
     }
 }
+
+
+
+

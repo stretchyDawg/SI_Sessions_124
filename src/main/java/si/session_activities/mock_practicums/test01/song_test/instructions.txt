@@ -94,8 +94,8 @@ Topics covered by this mock practicum:
 
    Title,Author,Runtime,Genre,Album/Single,AlbumName
    For example:
-   AlbumSongs: Weird Girl, Mommy Long Legs, 144, Punk Rock, Album, Assholes
-   SingleSongs: Lumberjack, Tyler the Creator, 138, Alternative Hip-Hop, Single
+   AlbumSongs: Weird Girl,Mommy Long Legs,144,Punk Rock,Album,Assholes
+   SingleSongs: Lumberjack,Tyler the Creator,138,Alternative Hip-Hop,Single
 
    Add a static method to the SongMain class that declares a parameter
    for a filename and returns an array of Songs that have been parsed 

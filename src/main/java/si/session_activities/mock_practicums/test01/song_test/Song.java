@@ -37,13 +37,18 @@ public class Song {
     public boolean equals(Object obj) {
         if(obj instanceof Song){
             Song other = (Song)obj;
-            return this.title.equals(other.title) && this.author.equals(other.author) && this.runtime == other.runtime;
+            return this.title.equals(other.title) && 
+                   this.author.equals(other.author) && 
+                   this.runtime == other.runtime;
         }
         return false;
     }
+
     // String representation
     @Override
     public String toString() {
         return title + " by " + author + ": " + runtime + " seconds, Genre: " + genre;
     }
 }
+
+
