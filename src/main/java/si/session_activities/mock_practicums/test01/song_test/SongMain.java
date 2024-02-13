@@ -38,6 +38,10 @@ public class SongMain {
     public static void main(String[] args) throws FileNotFoundException, IOException {
         System.out.println();
         Song[] songs = getSongs("C:/songs.txt");
+        for(int i = 0; i < songs.length; i++){
+            System.out.println(songs[i]);
+        }
+        
         for(Song song : songs){
             System.out.println(song);
         }
