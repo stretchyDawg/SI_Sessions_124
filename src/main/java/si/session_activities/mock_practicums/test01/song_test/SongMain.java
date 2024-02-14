@@ -42,8 +42,8 @@ public class SongMain {
             System.out.println(songs[i]);
         }
         
-        for(Song song : songs){
-            System.out.println(song);
-        }
+        // for(Song song : songs){
+        //     System.out.println(song);
+        // }
     }
 }
