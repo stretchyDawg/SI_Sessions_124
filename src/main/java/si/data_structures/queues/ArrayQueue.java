@@ -1,8 +1,10 @@
-package si.data_structures;
+package si.data_structures.queues;
 
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
+
+import si.data_structures.ArrayIterator;
 
 public class ArrayQueue<E> implements Queue<E>{
     

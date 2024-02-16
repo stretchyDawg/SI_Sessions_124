@@ -1,10 +1,11 @@
-package si.data_structures;
+package si.data_structures.queues;
 import java.util.Iterator;
 
 public interface Queue<E> extends Iterable<E>{
     void enqueue(E value);
     E dequeue();
     int size();
+    // E getFront();
 
     default Iterator<E> iterator(){
         throw new UnsupportedOperationException("Iterator() not supported");

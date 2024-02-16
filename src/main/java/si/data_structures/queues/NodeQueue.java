@@ -1,6 +1,9 @@
-package si.data_structures;
+package si.data_structures.queues;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
+
+import si.data_structures.Node;
+import si.data_structures.NodeIterator;
 
 public class NodeQueue<E> implements Queue<E>{
     private Node<E> front;
@@ -11,6 +14,10 @@ public class NodeQueue<E> implements Queue<E>{
         front = null;
         back = null;
         size = 0;
+    }
+
+    public E getFront(){
+        return this.front.getValue();
     }
 
     @Override
