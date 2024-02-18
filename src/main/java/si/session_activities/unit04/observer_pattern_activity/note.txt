@@ -1,0 +1,2 @@
+NOTE: This activity can only be done AFTER unit 05 introduces Queues. 
+Generics are not needed (just have them use Strings for song titles) - they would make the activity more complicated for no reason. 
