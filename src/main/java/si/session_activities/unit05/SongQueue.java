@@ -37,7 +37,7 @@ public class SongQueue {
         Scanner scan = new Scanner(System.in);
         while(queue.size() != 0){
             System.out.println();
-            System.out.println("Current song: " + queue.getFront());
+            // System.out.println("Current song: " + queue.getFront());   Now not working because I got rid of this method. Fix for future uses of this activity.
             System.out.println("Songs left: " + queue.size());
             System.out.print(">> ");
             String input = scan.nextLine();
