@@ -16,10 +16,6 @@ public class NodeQueue<E> implements Queue<E>{
         size = 0;
     }
 
-    public E getFront(){
-        return this.front.getValue();
-    }
-
     @Override
     public void enqueue(E value) {
         Node<E> n = new Node<>(value);
