@@ -57,7 +57,7 @@ public class UsernameGUI extends Application implements USObserver {
     }
 
     @Override
-    public void update(Username model) {
+    public void update(@SuppressWarnings("exports") Username model) {
         model.makeUsername(textfield.getText());
         String userName = model.getUsername();
         usernameDisplay.setText(userName);
