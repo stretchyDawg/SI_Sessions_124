@@ -1,4 +1,4 @@
-package si.session_activities.unit04.observer_pattern_activity.song_queue.view;
+package si.session_activities.unit04.observer_pattern_activity.spotify.view;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -14,7 +14,7 @@ import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import si.session_activities.unit04.observer_pattern_activity.song_queue.model.SpotifyQueue;
+import si.session_activities.unit04.observer_pattern_activity.spotify.model.SpotifyQueue;
 
 public class SpotifyGUI extends Application{
     SpotifyQueue model = new SpotifyQueue();
@@ -26,8 +26,7 @@ public class SpotifyGUI extends Application{
         Label label = new Label(msg);
         label.setMaxWidth(Integer.MAX_VALUE);
         label.setBackground(new Background(new BackgroundFill(Color.LIGHTBLUE, CornerRadii.EMPTY, Insets.EMPTY)));
-        label.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, 
-        CornerRadii.EMPTY, BorderStroke.THIN)));
+        label.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderStroke.THIN)));
         return label;
     }
 
@@ -41,7 +40,8 @@ public class SpotifyGUI extends Application{
         VBox vBox = new VBox();
         Button play = new Button("Play next song");
         play.setMaxWidth(Integer.MAX_VALUE);
-        play.setOnAction(new Play(this, model));
+        play.setOnAction(new Play(this, model));          // <-- THIS is where you call the controller.
+        // Play.java is the 'controller'. You 'initialize' or 'setup' the controller when you pass it in the setOnAction method.
         vBox.getChildren().addAll(songDisplay, songCount, play);
         
         Scene scene = new Scene(vBox);

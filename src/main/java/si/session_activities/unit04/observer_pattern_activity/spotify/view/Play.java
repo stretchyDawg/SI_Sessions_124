@@ -1,4 +1,4 @@
-package si.session_activities.unit04.observer_pattern_activity.song_queue.view;
+package si.session_activities.unit04.observer_pattern_activity.spotify.view;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -7,7 +7,7 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.paint.Color;
-import si.session_activities.unit04.observer_pattern_activity.song_queue.model.SpotifyQueue;
+import si.session_activities.unit04.observer_pattern_activity.spotify.model.SpotifyQueue;
 
 public class Play implements EventHandler<ActionEvent>{
 

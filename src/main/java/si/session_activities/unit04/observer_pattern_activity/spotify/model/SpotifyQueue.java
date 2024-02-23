@@ -1,4 +1,4 @@
-package si.session_activities.unit04.observer_pattern_activity.song_queue.model;
+package si.session_activities.unit04.observer_pattern_activity.spotify.model;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
