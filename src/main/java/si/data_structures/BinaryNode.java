@@ -1,4 +1,4 @@
-package si.data_structures.binary_search_trees;
+package si.data_structures;
 
 public class BinaryNode<E>{
     private E value;
