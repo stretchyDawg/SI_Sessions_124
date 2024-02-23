@@ -1,4 +1,6 @@
-package unit05.mcf;
+package si.data_structures.lists;
+
+import si.data_structures.Node;
 
 public class LinkedList<E> implements List<E> {
     private Node<E> head;
