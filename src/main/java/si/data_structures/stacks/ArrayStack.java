@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 import si.data_structures.ArrayIterator;
 
-public class ArrayStack<E> implements Stack<E>, Iterable<E> {
+public class ArrayStack<E> implements Stack<E> {
     private static final int INIT_CAPACITY = 4;
     private Object[] elements;
     private int size;
