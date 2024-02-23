@@ -1,6 +1,9 @@
 package si.data_structures.lists;
 
+import java.util.Iterator;
+
 import si.data_structures.Node;
+import si.data_structures.NodeIterator;
 
 public class LinkedList<E> implements List<E> {
     private Node<E> head;
@@ -80,6 +83,12 @@ public class LinkedList<E> implements List<E> {
     @Override
     public String toString(){
         return size + ", " + this.head;
+    }
+
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+    @Override
+    public Iterator<E> iterator(){
+        return new NodeIterator(head);
     }
 
     @Override @SuppressWarnings("unchecked")
