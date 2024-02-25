@@ -4,6 +4,9 @@ import java.util.Arrays;
 
 import si.data_structures.ArrayIterator;
 
+
+
+
 public class ArrayStack<E> implements Stack<E> {
     private static final int INIT_CAPACITY = 4;
     private Object[] elements;
@@ -40,15 +43,13 @@ public class ArrayStack<E> implements Stack<E> {
         E value = (E)elements[size];
         elements[size] = null;
         size--;
-        
         if(this.size != 0){
             this.top = (E)elements[size-1];
         }
         else{
             this.top = null;
         }
-        
-
+    
         return value;
     }
 

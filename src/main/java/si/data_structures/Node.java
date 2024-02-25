@@ -51,7 +51,7 @@ public class Node<E> {
 
         // return value + "->" + ((next != null) ? next.toString():"null"); //compacted if statement
 
-        return value + " --> " + next;  //very compact version
+        return value + " -> " + next;  //very compact version
     } 
     public static void main(String[] args) {
         Node<String> n = new Node<>("a",new Node<>("b",new Node<>("c")));
