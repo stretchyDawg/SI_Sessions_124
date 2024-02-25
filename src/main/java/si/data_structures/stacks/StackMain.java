@@ -34,5 +34,8 @@ public class StackMain {
         System.out.println(nodeStack);
         nodeStack.push(2);
         System.out.println(nodeStack);
+        int value = nodeStack.pop();
+        System.out.println(nodeStack);
+        System.out.println(value);
     }
 }
