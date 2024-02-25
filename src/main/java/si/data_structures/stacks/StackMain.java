@@ -37,5 +37,9 @@ public class StackMain {
         int value = nodeStack.pop();
         System.out.println(nodeStack);
         System.out.println(value);
+
+        for(Integer element : nodeStack){
+            System.out.println(element);
+        }
     }
 }

@@ -20,5 +20,4 @@ public class NodeIterator<E> implements Iterator<E>{
         node = node.getNext();
         return element;
     }
-
 }
