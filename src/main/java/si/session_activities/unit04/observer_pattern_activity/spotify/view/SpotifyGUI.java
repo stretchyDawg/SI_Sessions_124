@@ -32,7 +32,7 @@ public class SpotifyGUI extends Application{
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        model.enqueueFile("C:\\Users\\Christian Morgado\\Repos\\SI\\SI_Sessions_124\\src\\main\\java\\si\\session_activities\\unit04\\observer_pattern_activity\\song_queue\\model\\songs2.txt");
+        model.enqueueFile("C:\\Users\\Christian Morgado\\Repos\\SI\\SI_Sessions_124\\src\\main\\java\\si\\session_activities\\unit04\\observer_pattern_activity\\spotify\\model\\songs2.txt");
         String songTitle = model.dequeueSong();
         songDisplay.setText(songTitle);
         songCount.setText("Songs left: " + model.getSongsLeft());
