@@ -2,10 +2,10 @@ package si.session_activities.unit06;
 
 import java.util.Comparator;
 
-public class SongComparator implements Comparator<SongSI> {
+public class SongComparator implements Comparator<Song> {
 
     @Override
-    public int compare(SongSI o1, SongSI o2) {
+    public int compare(Song o1, Song o2) {
         if(o1.getAuthor().compareTo(o2.getAuthor()) == -1){
             return -1;
         } 

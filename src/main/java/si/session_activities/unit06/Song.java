@@ -1,6 +1,8 @@
 package si.session_activities.unit06;
 
-public class Song {
+// The finished version.
+
+public class Song implements Comparable<Song>{
     private String title;
     private String author;
     private int runtime;
@@ -48,5 +50,26 @@ public class Song {
             return (title.equals(other.getTitle()) && author.equals(other.getAuthor()) && runtime == other.getRuntime()); 
         }
         return false;
+    }
+
+    @Override
+    public int compareTo(Song other) {
+        if(this.getTitle().compareTo(other.getTitle()) == -1){
+            return -1;
+        } 
+        else if(this.getTitle().compareTo(other.getTitle()) == 1){
+            return 1;
+        }
+        else{
+            if(this.getAuthor().compareTo(other.getAuthor()) == -1){
+                return -1;
+            }
+            else if(this.getAuthor().compareTo(other.getAuthor()) == 1){
+                return 1;
+            }
+            else{
+                return 0;
+            }
+        }   
     }
 }
