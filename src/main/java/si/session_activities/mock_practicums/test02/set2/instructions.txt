@@ -40,7 +40,22 @@ e: Show me :) (the SI)
 --------------------------------------------
 
 2. (30 Points) Iterator
-A double-ended stack is a stack that you can 
+Download the provided files given for this question. You may have to set the package declaration and
+imports. Here are the descriptions:
+- Stack.java: A Stack interface. Provides basic definitions of Stack methods.
+- NodeStack.java: An implementation of a Stack that makes use of Nodes. 
+- Node.java: An implementation of Node (if you already have one you don't need this).
+- NodeIterator: DO NOT MODIFY. An implementation of a NodeIterator given a root node.
+
+In its current given state, the provided NodeStack class is not iterable. Proviide the implementation needed
+to make it iterable:
+- Have the Stack.java interface extend Iterable<E> and include a default implementation of the iterator() 
+  method that throws an UnsupportedOperationException.
+- Implement the iterator() method in NodeStack.java, you will have to use an instance of the NodeIterator.java 
+  class for this.
+
+After this, create a NodeStackMain class and push some values to the NodeStack. Use a for-each loop to iterate
+through each value in the NodeStack and print them to confirm that you have correctly made the NodeStack iterable.
 
 --------------------------------------------
 
@@ -54,7 +69,7 @@ a: Create a basic_calculator folder. (You don't have to make a model and view fo
 
 b: Create a CalculatorGUI.java file with the appropriate signature for launching a GUI.
 - Inside the GUI create:
-    - An HBox with two buttons, a + button and a - button. 
+    - An HBox with two buttons, a '+' button and a '-' button. 
     - Then, create a VBox with 3 children, one label at the top, one label at the middle and the HBox at the bottom.
    Run the GUI to make sure it's working. 
 

@@ -22,6 +22,11 @@ public class StackMain {
         System.out.println(nodeStack);
         nodeStack.push(4);
         System.out.println(nodeStack);
+
+        for(Integer element : nodeStack){
+            System.out.println(element);
+        }
+
         nodeStack.pop();
         System.out.println(nodeStack);
         nodeStack.pop();
