@@ -1,0 +1,58 @@
+GCIS-124 SI Mock Pracitcum
+Time: 40 Minutes (you have 55 minutes (half the 110 minute period) to do your real practicum)
+
+Welcome! You may do each problem in any order as you please. I would suggest you do the questions
+that cover topics you are not familiar with FIRST. Get some practice with the hard stuff first. 
+
+This session is a SAFE SPACE to get things wrong. When learning new concepts, since you are human 
+you will definitely get things wrong. You might as well get it wrong at the SI Session instead of 
+the real test. So give the frustrating questions a shot and ask your group table or me for help! 
+
+I added points for you to grades yourselves!
+
+------- ^ READ THIS QUICKLY FIRST ^ -------
+
+Topics that may be covered:
+- Iterator
+- Comparator
+- BSTs and Heaps
+- JavaFX <-- WILL 100% BE COVERED
+
+
+1. (30 Points) Comparator
+A student has a name and a GPA. Create a class representing this with a constructor that passes 
+both parameters in, along with getters and setters.
+
+a: A student is greater than another student if their GPA is higher. If they have the same GPA, 
+then they are sorted alphabetically. Modify the student class to implement this functionality.
+
+b: Students should also be able to be sorted alphabetically first, then by GPA. Create a helper 
+class to implement this functionality.
+
+c: Create a StudentMain class that only has a main method. Add some students with different names
+and gpas to a LinkedList. Sort that list regularly and print out each student in a for-each loop.
+
+d: Sort the list again but using the Comparator class. Print out each student once more. 
+
+e: Show me :) (the SI)
+
+
+2. (30 Points) Iterator
+A double-ended stack is a stack that you can 
+
+
+3. (35 Points) JavaFX
+YOU HAVE BEEN PROVIDED A LABEL FACTORY METHOD TO USE.
+a: 
+
+
+4. (5 Points) BinarySearchTrees and Heaps
+Create a TreeMain class that only has a main method. In the main method, create an instance of a 
+Binary Search Tree and a Heap (the ones made from class). Add these values to both the BST and 
+the Heap:
+[10, 13, 21, 18, 11, 8, 9, 12, 30, 1000]
+
+Print the BST and the Heap and show me (the SI). If you want to grade yourself, they should look
+like this:
+Binary Search Tree: "8 9 10 11 12 13 18 21 30 1000" 
+Heap: "[8, 11, 9, 12, 13, 21, 10, 18, 30, 1000, 0], 10"
