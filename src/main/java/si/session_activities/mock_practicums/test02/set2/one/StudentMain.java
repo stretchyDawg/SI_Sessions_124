@@ -1,4 +1,4 @@
-package si.session_activities.mock_practicums.test02.set2.two;
+package si.session_activities.mock_practicums.test02.set2.one;
 
 import java.util.Collections;
 import java.util.LinkedList;

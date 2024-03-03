@@ -13,4 +13,5 @@ module si {
     exports si.review.javafx_review.containers;
     exports si.review.javafx_review.user_input;
     exports si.review.javafx_review.images;
+    exports si.session_activities.mock_practicums.test02.set2.three;
 }
