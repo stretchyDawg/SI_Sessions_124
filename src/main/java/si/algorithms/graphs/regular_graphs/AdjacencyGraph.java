@@ -55,26 +55,43 @@ public class AdjacencyGraph<E> implements Graph<E> {
         return vertexA.connected(vertexB);
     }
 
+
+    /*
+     * Search = Checking if a path exists between one end to another.
+     * 
+     * Get start and end vertices from map.
+     * 
+     * Create a queue of vertices you will check using a linked list.
+     * Create a set of visited vertices.
+     * Add start vertex to queue and set.
+     * 
+     * Dequeue front, if it equals the end, return true.
+     * If it doesn't, add all of that vertex's neighbors to set and queue.
+     * Check to see if the neighbors are the end until queue is empty.
+     * 
+     * If never true, return false.
+     */
     @Override
     public boolean bfSearch(E start, E end) {
-        Vertex<E> s = vertices.get(start);
-        Vertex<E> e = vertices.get(end);
+        Vertex<E> startVertex = vertices.get(start);
+        Vertex<E> endVertex = vertices.get(end);
 
         Queue<Vertex<E>> queue = new LinkedList<>();
         Set<Vertex<E>> visited = new HashSet<>();
 
-        queue.add(s);
-        visited.add(s);
+        queue.add(startVertex);
+        visited.add(startVertex);
 
         while(!queue.isEmpty()) {
-            Vertex<E> v = queue.poll();
-            if(v == e) {
+            Vertex<E> enqueuedVertex = queue.poll();
+            if(enqueuedVertex == endVertex) {
                 return true;
-            } else {
-                for(Vertex<E> n : v.getNeighbors()) {
-                    if(!visited.contains(n)) {
-                        visited.add(n);
-                        queue.add(n);
+            } 
+            else {
+                for(Vertex<E> neighborVertex : enqueuedVertex.getNeighbors()) {
+                    if(!visited.contains(neighborVertex)) {
+                        visited.add(neighborVertex);
+                        queue.add(neighborVertex);
                     }
                 }
             }
@@ -83,47 +100,58 @@ public class AdjacencyGraph<E> implements Graph<E> {
         return false;
     }
 
+    /*
+     * Do the same except make a map to have unique keys but nonunique values.
+     */
     @Override
     public List<E> bfPath(E start, E end) {
-        Vertex<E> s = vertices.get(start);
-        Vertex<E> e = vertices.get(end);
+        Vertex<E> startVertex = vertices.get(start);
+        Vertex<E> endVertex = vertices.get(end);
 
         Queue<Vertex<E>> queue = new LinkedList<>();
         Map<Vertex<E>, Vertex<E>> predecessors = new HashMap<>();
+        // Key = Vertex  <---->  Value = Where it came from
 
-        queue.add(s);
-        predecessors.put(s, null);
+        queue.add(startVertex);
+        predecessors.put(startVertex, null);
 
         while(!queue.isEmpty()) {
-            Vertex<E> v = queue.poll();
-            if(v == e) {
-                break;
-            } else {
-                for(Vertex<E> n : v.getNeighbors()) {
-                    if(!predecessors.containsKey(n)) {
-                        predecessors.put(n, v);
-                        queue.add(n);
+            Vertex<E> enqueuedVertex = queue.poll();
+            if(enqueuedVertex == endVertex) {
+                break; // Found path.
+            } 
+            else {
+                for(Vertex<E> neighborVertex : enqueuedVertex.getNeighbors()) {
+                    if(!predecessors.containsKey(neighborVertex)) {
+                        predecessors.put(neighborVertex, enqueuedVertex);
+                        queue.add(neighborVertex);
                     }
                 }
             }
         }
 
-        return makePath(predecessors, e);
+        return makePath(predecessors, endVertex);
     }
 
-    private List<E> makePath(Map<Vertex<E>, Vertex<E>> predecessors,
-        Vertex<E> end) {
-            if(predecessors.containsKey(end)) {
-                List<E> path = new LinkedList<>();
-                Vertex<E> current = end;
-                while(current != null) {
-                    path.add(0, current.getValue());
-                    current = predecessors.get(current);
-                }
-                return path;
-            } else {
-                return null;
+    private List<E> makePath(Map<Vertex<E>, Vertex<E>> predecessors, Vertex<E> endVertex) {
+        if(predecessors.containsKey(endVertex)) {
+            List<E> path = new LinkedList<>();
+            Vertex<E> current = endVertex;
+            
+            // Start from the end:
+            // - Add value to the start of the list 
+            // - Shift everything to the right after that.
+            // - Get the next predecessor until it is null (start is the ony one associated with null)
+            while(current != null) {
+                path.add(0, current.getValue());
+                current = predecessors.get(current);
             }
+
+            return path;
+        } 
+        else {
+            return null; // If the end isn't there, don't even make a path.
+        }
     }
 
     @Override
