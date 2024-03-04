@@ -1,0 +1,1 @@
+Usually graphs would be in data structures but because they are closely related to most algorithms covered in GCIS-124 I am also putting them here. 
