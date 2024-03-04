@@ -1,4 +1,4 @@
-package si.algorithms.graphs;
+package si.algorithms.graphs.regular_graphs;
 
 import java.util.List;
 

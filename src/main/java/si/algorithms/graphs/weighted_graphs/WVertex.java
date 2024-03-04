@@ -1,4 +1,4 @@
-package si.algorithms.graphs;
+package si.algorithms.graphs.weighted_graphs;
 
 import java.util.HashMap;
 import java.util.Map;
