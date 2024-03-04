@@ -1,5 +1,7 @@
 package si.session_activities.mock_practicums.test02.set2.two;
 
+import java.util.Iterator;
+
 import si.data_structures.Node;
 
 public class NodeStack<E> implements Stack<E> {
@@ -8,6 +10,11 @@ public class NodeStack<E> implements Stack<E> {
 
     public NodeStack(E value){
         this.push(value);
+    }
+
+    @Override
+    public Iterator<E> iterator(){
+        return new NodeIterator<E>(this.top);
     }
 
     @Override

@@ -8,9 +8,13 @@ import si.data_structures.NodeIterator;
 public class NodeStack<E> implements Stack<E> {
     private Node<E> top;
     private int size;
-
+    
     public NodeStack(E value){
         this.push(value);
+    }
+    
+    public Iterator<E> iterator(){
+        return new NodeIterator<E>(this.top);
     }
 
     @Override
@@ -60,9 +64,6 @@ public class NodeStack<E> implements Stack<E> {
         return null;
     }
     
-    public Iterator<E> iterator(){
-        return new NodeIterator<E>(this.top);
-    }
 
     public String toString(){
         if(this.top != null){

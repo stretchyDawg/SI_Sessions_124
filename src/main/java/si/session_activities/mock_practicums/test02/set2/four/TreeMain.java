@@ -30,7 +30,7 @@ public class TreeMain {
             bst.insert(num);
             heap.add(num);
         }
-        System.out.println(bst);
-        System.out.println(heap);
+        System.out.println("BST: " + bst);
+        System.out.println("HEAP: " + heap);
     }
 }

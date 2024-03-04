@@ -20,25 +20,6 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class CalculatorGUI extends Application{
-    private Button makeButton(String msg){
-        Button button = new Button(msg);
-        button.setMaxWidth(Integer.MAX_VALUE);
-        button.setBackground(new Background(new BackgroundFill(Color.LIGHTGREEN, CornerRadii.EMPTY, Insets.EMPTY)));
-        button.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, 
-        CornerRadii.EMPTY, BorderStroke.THIN)));
-        return button;
-    }
-    
-    private Label makeLabel(String msg){
-        Label label = new Label(msg);
-        label.setMaxWidth(Integer.MAX_VALUE);
-        label.setBackground(new Background(new BackgroundFill(Color.LIGHTBLUE, CornerRadii.EMPTY, Insets.EMPTY)));
-        label.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderStroke.THIN)));
-        label.setAlignment(Pos.CENTER);
-        label.setFont(Font.font(50));
-        return label;
-    }
-    
     @Override
     public void start(Stage primaryStage) throws Exception {
         // HBox
@@ -60,7 +41,7 @@ public class CalculatorGUI extends Application{
 
         // Scene
         Scene scene = new Scene(vBox);
-        primaryStage.setTitle("Basic Label");
+        primaryStage.setTitle("Calc GUI");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
@@ -68,4 +49,28 @@ public class CalculatorGUI extends Application{
     public static void main(String[] args) {
         launch(args);
     }
+
+
+
+
+
+    private Button makeButton(String msg){
+        Button button = new Button(msg);
+        button.setMaxWidth(Integer.MAX_VALUE);
+        button.setBackground(new Background(new BackgroundFill(Color.LIGHTGREEN, CornerRadii.EMPTY, Insets.EMPTY)));
+        button.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, 
+        CornerRadii.EMPTY, BorderStroke.THIN)));
+        return button;
+    }
+    
+    private Label makeLabel(String msg){
+        Label label = new Label(msg);
+        label.setMaxWidth(Integer.MAX_VALUE);
+        label.setBackground(new Background(new BackgroundFill(Color.LIGHTBLUE, CornerRadii.EMPTY, Insets.EMPTY)));
+        label.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderStroke.THIN)));
+        label.setAlignment(Pos.CENTER);
+        label.setFont(Font.font(50));
+        return label;
+    }
+    
 }
