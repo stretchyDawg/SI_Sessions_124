@@ -1,4 +1,4 @@
-package si.algorithms.graphs.weighted_graphs;
+package si.algorithms.bfs_dfs.weighted_graphs;
 
 import java.util.List;
 

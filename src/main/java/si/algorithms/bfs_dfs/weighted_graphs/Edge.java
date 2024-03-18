@@ -1,4 +1,4 @@
-package si.algorithms.graphs.weighted_graphs;
+package si.algorithms.bfs_dfs.weighted_graphs;
 
 public class Edge<E> implements Comparable<Edge<E>> {
     private double weight;

@@ -1,4 +1,4 @@
-package si.algorithms.graphs.regular_graphs;
+package si.algorithms.bfs_dfs.regular_graphs;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -154,28 +154,23 @@ public class AdjacencyGraph<E> implements Graph<E> {
         }
     }
 
+    /*
+     * Make set of visited with only start vertex.
+     * 
+     * Call recursive visitDFS(pass in start and set of visited)
+     * In function, add all neighbors to visited.
+     */
     @Override
     public boolean dfSearch(E start, E end) {
-        Vertex<E> s = vertices.get(start);
-        Vertex<E> e = vertices.get(end);
+        Vertex<E> startVertex = vertices.get(start);
+        Vertex<E> endVertex = vertices.get(end);
 
         Set<Vertex<E>> visited = new HashSet<>();
-        visited.add(s);
+        visited.add(startVertex);
 
-        visitDFS(s, visited);
+        visitDFS(startVertex, visited);
 
-        return visited.contains(e);
-    }
-
-    @Override
-    public List<E> dfPath(E start, E end) {
-        Vertex<E> s = vertices.get(start);
-        Vertex<E> e = vertices.get(end);
-
-        Set<Vertex<E>> visited = new HashSet<>();
-        visited.add(s);
-
-        return visitDFPath(s, e, visited);
+        return visited.contains(endVertex);
     }
 
     private void visitDFS(Vertex<E> vertex, Set<Vertex<E>> visited) {
@@ -187,19 +182,31 @@ public class AdjacencyGraph<E> implements Graph<E> {
         }
     }
 
-    private List<E> visitDFPath(Vertex<E> v, Vertex<E> e, 
-        Set<Vertex<E>> visited) {
-        if(v == e) {
+    @Override
+    public List<E> dfPath(E start, E end) {
+        Vertex<E> startVertex = vertices.get(start);
+        Vertex<E> endVertex = vertices.get(end);
+
+        Set<Vertex<E>> visited = new HashSet<>();
+        visited.add(startVertex);
+
+        return visitDFPath(startVertex, endVertex, visited);
+    }
+
+    private List<E> visitDFPath(Vertex<E> vertex, Vertex<E> endVertex, Set<Vertex<E>> visited) {
+        if(vertex == endVertex) {
             List<E> path = new LinkedList<>();
-            path.add(e.getValue());
+            path.add(endVertex.getValue());
+            
             return path;
-        } else {
-            for(Vertex<E> neighbor : v.getNeighbors()) {
+        } 
+        else {
+            for(Vertex<E> neighbor : vertex.getNeighbors()) {
                 if(!visited.contains(neighbor)) {
                     visited.add(neighbor);
-                    List<E> path = visitDFPath(neighbor, e, visited);
+                    List<E> path = visitDFPath(neighbor, endVertex, visited);
                     if(path != null) {
-                        path.add(0, v.getValue());
+                        path.add(0, vertex.getValue());
                         return path;
                     }
                 }
