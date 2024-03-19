@@ -5,8 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import si.algorithms.graphs.weighted_graphs.WGraph;
-import si.algorithms.graphs.weighted_graphs.WPath;
+import si.algorithms.bfs_dfs.weighted_graphs.WGraph;
+import si.algorithms.bfs_dfs.weighted_graphs.WPath;
 
 public class Network {
 
