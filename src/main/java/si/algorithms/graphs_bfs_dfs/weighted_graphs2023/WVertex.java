@@ -13,9 +13,13 @@ public class WVertex<E> {
         this.value = value;
         neighbors = new HashMap<>();
     }
-
+    
     public E getValue() {
         return value;
+    }
+    
+    public Map<WVertex<E>, Edge<E>> getNeighbors() {
+        return neighbors;
     }
 
     public void connect(WVertex<E> neighbor, double weight) {
@@ -39,4 +43,5 @@ public class WVertex<E> {
     public String toString() {
         return value.toString();
     }
+
 }

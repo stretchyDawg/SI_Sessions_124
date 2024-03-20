@@ -80,7 +80,8 @@ public class WAdjacencyGraph<E> implements WGraph<E> {
         if(v == e) {
             WPath<E> path = new WPath<>(e.getValue());
             return path;
-        } else {
+        } 
+        else {
             for(Edge<E> edge : v.edges()) {
                 WVertex<E> neighbor = edge.getTo();
                 if(!visited.contains(neighbor)) {
