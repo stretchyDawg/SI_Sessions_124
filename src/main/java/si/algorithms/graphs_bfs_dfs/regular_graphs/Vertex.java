@@ -1,4 +1,4 @@
-package si.algorithms.bfs_dfs.regular_graphs;
+package si.algorithms.graphs_bfs_dfs.regular_graphs;
 
 import java.util.Set;
 import java.util.HashSet;

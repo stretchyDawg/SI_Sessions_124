@@ -1,4 +1,4 @@
-package si.algorithms.bfs_dfs.regular_graphs;
+package si.algorithms.graphs_bfs_dfs.regular_graphs;
 
 public class GraphPathMain {
     public static void printPath(Graph<String> graph, String a, String b){

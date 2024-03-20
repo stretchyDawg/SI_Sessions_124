@@ -1,4 +1,4 @@
-package si.algorithms.bfs_dfs.weighted_graphs;
+package si.algorithms.graphs_bfs_dfs.weighted_graphs2023;
 
 import java.util.ArrayList;
 import java.util.HashMap;
