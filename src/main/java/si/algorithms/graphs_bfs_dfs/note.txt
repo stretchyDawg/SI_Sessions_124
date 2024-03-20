@@ -1,1 +1,7 @@
 Usually graphs would be in data structures but because they are closely related to most algorithms covered in GCIS-124 I am also putting them here. 
+
+Algorithms:
+- BFS (in graphs)
+- DFS (in graphs)
+- Nearest Neighbor (in wgraphs)
+- Djikstras (in wgraphs)
