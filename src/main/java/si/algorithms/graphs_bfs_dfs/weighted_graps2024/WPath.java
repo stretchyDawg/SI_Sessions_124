@@ -59,7 +59,7 @@ public class WPath<E> {
      * 
      * @return The distance of the path.
      */
-    public double distance() {
+    public double getDistance() {
         return distance;
     }
 

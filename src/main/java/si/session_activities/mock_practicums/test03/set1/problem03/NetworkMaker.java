@@ -1,7 +1,7 @@
 package si.session_activities.mock_practicums.test03.set1.problem03;
 
-import si.algorithms.bfs_dfs.weighted_graphs.WAdjacencyGraph;
-import si.algorithms.bfs_dfs.weighted_graphs.WGraph;
+import si.algorithms.graphs_bfs_dfs.weighted_graphs2023.WAdjacencyGraph;
+import si.algorithms.graphs_bfs_dfs.weighted_graphs2023.WGraph;
 
 public class NetworkMaker {
     public static Network makeNetwork() {
