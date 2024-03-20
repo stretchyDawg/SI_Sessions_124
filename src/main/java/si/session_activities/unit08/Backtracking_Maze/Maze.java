@@ -8,8 +8,6 @@ public class Maze {
   public int currCol;
 
   public Maze(Maze m) {
-    this.currRow = currRow;
-    this.currCol = currCol;
     this.rows = m.rows;
     this.cols = m.cols;
     map = new char[rows][cols];
