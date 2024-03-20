@@ -32,9 +32,7 @@ public class MazeConf implements Configuration {
   }
 
   public ArrayList<Configuration> getSuccessors() {
-    int rows = maze.rows;
-    int cols = maze.cols;
-    ArrayList<Configuration> succs = new ArrayList();
+    ArrayList<Configuration> succs = new ArrayList<>();
     int[][] signs = { {0,1}, {0,-1}, {1,0}, {-1,0} };
     for(int i = 0; i < signs.length; i++) {
         int r = maze.currRow + signs[i][0];
