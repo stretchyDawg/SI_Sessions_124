@@ -1,4 +1,4 @@
-package si.algorithms.graphs_bfs_dfs.weighted_graps2024;
+package si.algorithms.graphs_bfs_dfs.weighted_graphs2024;
 
 /**
  * Defines the abstract data type for a weighted graph.
