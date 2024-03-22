@@ -28,25 +28,29 @@ import javafx.scene.layout.Priority;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+import si.algorithms.backtracker.Backtracker;
 import si.algorithms.backtracker.queens.model.Board;
 import si.algorithms.backtracker.queens.model.BoardObserver;
+import si.algorithms.backtracker.queens.model.NQueens;
+import si.algorithms.backtracker.queens.model.Queen;
 import si.algorithms.backtracker.queens.model.Square;
 
 public class NQueensGUI extends Application implements BoardObserver {
     private void solve() {
         status.setText("Not implemented!");
-        // Queen[] queens = board.getQueens();
-        // NQueens config = new NQueens(n, queens);
-        // Backtracker<NQueens> backtracker = new Backtracker<>(false);
-        // NQueens solution = backtracker.solve(config);
-        // if(solution != null) {
-        //     Queen[] solved = solution.getQueens();
-        //     board.clear();
-        //     board.placeQueens(solved);
-        //     status.setText("Solved!");
-        // } else {
-        //     status.setText("No solution...");
-        // }
+        Queen[] queens = board.getQueens();
+        NQueens config = new NQueens(n, queens);
+        Backtracker<NQueens> backtracker = new Backtracker<>(false);
+        NQueens solution = backtracker.solve(config);
+        if(solution != null) {
+            Queen[] solved = solution.getQueens();
+            board.clear();
+            board.placeQueens(solved);
+            status.setText("Solved!");
+        } 
+        else {
+            status.setText("No solution...");
+        }
     }
 
     private static final String IMAGE_PATH = "file:media/images/";
