@@ -37,7 +37,6 @@ import si.algorithms.backtracker.queens.model.Square;
 
 public class NQueensGUI extends Application implements BoardObserver {
     private void solve() {
-        status.setText("Not implemented!");
         Queen[] queens = board.getQueens();
         NQueens config = new NQueens(n, queens);
         Backtracker<NQueens> backtracker = new Backtracker<>(false);
