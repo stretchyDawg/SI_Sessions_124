@@ -6,25 +6,8 @@ import java.util.List;
 import si.algorithms.graphs_bfs_dfs.weighted_graphs2024.WAdjacencyGraph;
 
 public class GraphConfigMain {
-    public static WAdjacencyGraph<Character> graphOne(){
-        WAdjacencyGraph<Character> graph = new WAdjacencyGraph<>();
-        graph.add('A');
-        graph.add('B');
-        graph.add('C');
-        graph.add('D');
-        graph.add('E');
-
-        graph.connect('A', 'B', 1);
-        graph.connect('A','D', 5);
-        graph.connect('A','C', 3);
-        graph.connect('B', 'D', 7);
-        graph.connect('C','E', 4);
-        graph.connect('D','E',5);
-
-        return graph;
-    }
-    
     public static WAdjacencyGraph<Character> graphTwo(){
+        // The fact that is is a weighted graph means nothing.
         WAdjacencyGraph<Character> graph = new WAdjacencyGraph<>();
         graph.add('A');
         graph.add('B');
@@ -37,7 +20,7 @@ public class GraphConfigMain {
         graph.add('I');
         graph.add('J');
 
-        // Really complicated one :/ 
+        // Really complicated graph
         graph.connect('A', 'G', 1);
         graph.connect('A', 'H', 5);
         graph.connect('A', 'I', 3);
@@ -70,12 +53,29 @@ public class GraphConfigMain {
         graph.connect('J', 'C', 5);
         graph.connect('J', 'F', 3);
         graph.connect('J', 'I', 7);
-
-
         return graph;
     }
 
-    //standard solve method
+    public static WAdjacencyGraph<Character> graphOne(){
+        WAdjacencyGraph<Character> graph = new WAdjacencyGraph<>();
+        graph.add('A');
+        graph.add('B');
+        graph.add('C');
+        graph.add('D');
+        graph.add('E');
+
+        graph.connect('A', 'B', 1);
+        graph.connect('A', 'D', 5);
+        graph.connect('A', 'C', 3);
+        graph.connect('B', 'D', 7);
+        graph.connect('C', 'E', 4);
+        graph.connect('D', 'E', 5);
+
+        return graph;
+    }
+    
+    // solve method 
+    // this method is given to you here, and will (most likely, dont quote me) be given to you on tests and homework.
     public static List<GraphConfig> solve(GraphConfig config, ArrayList<GraphConfig> configs) {
         if(configs == null){
             configs = new ArrayList<>();
@@ -94,22 +94,23 @@ public class GraphConfigMain {
         return configs;
     }
 
+    // How to use Backtracker
     public static void main(String[] args) {
         System.out.println();
         WAdjacencyGraph<Character> graphOne = graphOne();
 
-        List<GraphConfig> configsAE = solve(new GraphConfig(graphOne, 'A', 'E'), null);
+        List<GraphConfig> configsAtoE = solve(new GraphConfig(graphOne, 'A', 'E'), null); // <-- Use the solve method (in this case it is static)
         int count = 1;
-        for(GraphConfig config : configsAE){
+        for(GraphConfig config : configsAtoE){
             System.out.println("Config " + count + ": " + config.getPath());
             count++;
         }
 
         System.out.println();
 
-        List<GraphConfig> configsBE = solve(new GraphConfig(graphOne, 'B', 'E'), null);
+        List<GraphConfig> configsBtoE = solve(new GraphConfig(graphOne, 'B', 'E'), null);
         count = 1;
-        for(GraphConfig config : configsBE){
+        for(GraphConfig config : configsBtoE){
             System.out.println("Config " + count + ": " + config.getPath());
             count++;
         }
