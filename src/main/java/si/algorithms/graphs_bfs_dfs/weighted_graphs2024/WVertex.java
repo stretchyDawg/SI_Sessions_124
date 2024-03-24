@@ -45,7 +45,7 @@ public class WVertex<E> {
      * @return A set of edges connected to neighbors.
      */
     public Set<Edge<E>> edges() {
-        Set<Edge<E>> edges = new TreeSet<>();
+        TreeSet<Edge<E>> edges = new TreeSet<>();
         for(WVertex<E> neighbor : neighbors.keySet()) {
             edges.add(neighbors.get(neighbor));
         }

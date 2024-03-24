@@ -152,4 +152,12 @@ public class WAdjacencyGraph<E> implements WGraph<E> {
 
         return path;
     }
+
+    public Map<E, WVertex<E>> getVertices() {
+        return vertices;
+    }
+
+    public WVertex<E> getVertex(E key) {        
+        return vertices.get(key);
+    }
 }
