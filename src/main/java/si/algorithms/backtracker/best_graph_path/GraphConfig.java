@@ -2,11 +2,9 @@ package si.algorithms.backtracker.best_graph_path;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Set;
 
 import si.algorithms.backtracker.Configuration;
 import si.algorithms.graphs_bfs_dfs.weighted_graphs2024.WAdjacencyGraph;
-import si.algorithms.graphs_bfs_dfs.weighted_graphs2024.WVertex;
 import si.algorithms.graphs_bfs_dfs.weighted_graphs2024.Edge;
 
 public class GraphConfig implements Configuration<GraphConfig> {
@@ -37,12 +35,9 @@ public class GraphConfig implements Configuration<GraphConfig> {
     public Collection<GraphConfig> getSuccessors() {
         ArrayList<GraphConfig> successors = new ArrayList<>();
 
-        WVertex<Character> mostRecentVertex = weightedGraph.getVertex(path.get(path.size()-1));
-        Set<Edge<Character>> vertexEdges = mostRecentVertex.edges();
-        
-        for (Edge<Character> e : vertexEdges) { 
+        for (Edge<Character> e : weightedGraph.getVertex(path.get(path.size()-1)).edges()) { // gets the most recently added character to the path and finds its edges
             Character newCharacter = e.getTo().getValue();
-            GraphConfig newGraphConfig = new GraphConfig(weightedGraph, path, newCharacter, newCharacter);
+            GraphConfig newGraphConfig = new GraphConfig(weightedGraph, path, newCharacter, end);
 
             successors.add(newGraphConfig);
         }
