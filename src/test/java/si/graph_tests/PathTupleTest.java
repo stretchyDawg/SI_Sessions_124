@@ -5,8 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 import org.junit.platform.commons.annotation.Testable;
 
-import si.algorithms.graphs_bfs_dfs.weighted_graps2024.PathTuple;
-import si.algorithms.graphs_bfs_dfs.weighted_graps2024.WVertex;
+import si.algorithms.graphs_bfs_dfs.weighted_graphs2024.PathTuple;
+import si.algorithms.graphs_bfs_dfs.weighted_graphs2024.WVertex;
 
 @Testable
 public class PathTupleTest {

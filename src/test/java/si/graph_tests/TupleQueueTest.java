@@ -4,9 +4,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-import si.algorithms.graphs_bfs_dfs.weighted_graps2024.PathTuple;
-import si.algorithms.graphs_bfs_dfs.weighted_graps2024.TupleQueue;
-import si.algorithms.graphs_bfs_dfs.weighted_graps2024.WVertex;
+import si.algorithms.graphs_bfs_dfs.weighted_graphs2024.PathTuple;
+import si.algorithms.graphs_bfs_dfs.weighted_graphs2024.TupleQueue;
+import si.algorithms.graphs_bfs_dfs.weighted_graphs2024.WVertex;
 
 public class TupleQueueTest {
     @Test

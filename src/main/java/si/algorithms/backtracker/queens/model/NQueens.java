@@ -16,7 +16,6 @@ public class NQueens implements Configuration<NQueens>{
         this(n, new Queen[0]);
     }
     
-    
     public NQueens(int n, Queen[] queens){
         this.n = n;
         if(queens != null){
@@ -27,12 +26,9 @@ public class NQueens implements Configuration<NQueens>{
         }
     }
 
-    
-    
     public Queen[] getQueens() {
         return queens;
     }
-
 
     @Override
     public Collection<NQueens> getSuccessors() {

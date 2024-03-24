@@ -1,7 +1,7 @@
 package si.algorithms.graphs_bfs_dfs.mains;
 
-import si.algorithms.graphs_bfs_dfs.weighted_graps2024.WAdjacencyGraph;
-import si.algorithms.graphs_bfs_dfs.weighted_graps2024.WGraph;
+import si.algorithms.graphs_bfs_dfs.weighted_graphs2024.WAdjacencyGraph;
+import si.algorithms.graphs_bfs_dfs.weighted_graphs2024.WGraph;
 
 /**
  * A helper class that makes weighted graphs suitable for testing algorithms.

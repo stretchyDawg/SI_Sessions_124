@@ -3,8 +3,8 @@ package si.graph_tests;
 import org.junit.jupiter.api.Test;
 
 import si.algorithms.graphs_bfs_dfs.mains.GraphMaker;
-import si.algorithms.graphs_bfs_dfs.weighted_graps2024.WGraph;
-import si.algorithms.graphs_bfs_dfs.weighted_graps2024.WPath;
+import si.algorithms.graphs_bfs_dfs.weighted_graphs2024.WGraph;
+import si.algorithms.graphs_bfs_dfs.weighted_graphs2024.WPath;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
