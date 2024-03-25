@@ -94,20 +94,20 @@ public class GraphConfigMain {
         return configs;
     }
 
-    // How to use Backtracker
+    // How to use Backtracker (simply just call the solve method they give you)
+    //
+    // In GCIS-124, you will either have to use the solve() method in the main method OR they will give you a JUnit test to solve.
     public static void main(String[] args) {
         System.out.println();
-        WAdjacencyGraph<Character> graphOne = graphOne();
 
+        WAdjacencyGraph<Character> graphOne = graphOne();
         List<GraphConfig> configsAtoE = solve(new GraphConfig(graphOne, 'A', 'E'), null); // <-- Use the solve method (in this case it is static)
         int count = 1;
         for(GraphConfig config : configsAtoE){
             System.out.println("Config " + count + ": " + config.getPath());
             count++;
         }
-
         System.out.println();
-
         List<GraphConfig> configsBtoE = solve(new GraphConfig(graphOne, 'B', 'E'), null);
         count = 1;
         for(GraphConfig config : configsBtoE){
@@ -115,11 +115,12 @@ public class GraphConfigMain {
             count++;
         }
 
+
         WAdjacencyGraph<Character> graphTwo = graphTwo();
         System.out.println();
-        List<GraphConfig> configsAI = solve(new GraphConfig(graphTwo, 'A', 'I'), null);
+        List<GraphConfig> configsAtoI = solve(new GraphConfig(graphTwo, 'A', 'I'), null);
         count = 1;
-        for(GraphConfig config : configsAI){
+        for(GraphConfig config : configsAtoI){
             System.out.println("Config " + count + ": " + config.getPath());
             count++;
         }
