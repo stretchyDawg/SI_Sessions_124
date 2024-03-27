@@ -55,24 +55,6 @@ public class GraphConfig implements Configuration<GraphConfig> {
     // isValid():
     // - Makes sure that a state is valid or not (invalid would be tic-tac-toe board with 2 X's or 2 O's, etc...)
     // - In the graphConfig context, it's making sure that there are no duplicate points in the path
-    // 
-    // There are two ways to achieve this:
-    // - You can use the ArrayList .contains() method (less lines of code)
-    // - You can make a Set.
-    // They both have the same time complexity (the ArrayList .contains() method uses Sets and takes the same amount of time)
-
-    // Less lines of code
-    // @Override
-    // public boolean isValid() {
-    //     Character pathSymbol = path.remove(path.size() - 1);
-    //     if(path.contains(pathSymbol)){
-    //         return false;
-    //     }
-    //     path.add(pathSymbol);
-    //     return true;
-    // }
-
-    // More lines of code (does the same thing, same time complexity, etc...)
     @Override
     public boolean isValid(){
         Set<Character> discoveredPathSymbols = new HashSet<>();
