@@ -22,8 +22,7 @@ public class GraphConfig implements Configuration<GraphConfig> {
         this.path.add(start);
     }
 
-    // Constructor for successor states / successor configurations
-    // This method is used in getSuccessors(). 
+    // Constructor for successor states / successor configurations (used in getSuccessors() method)
     // You will (most likely) have to make a second constructor for successors when making getSuccessors() on homeworks or tests.
     private GraphConfig(WAdjacencyGraph<Character> weightedGraph, ArrayList<Character> parentPath, Character newChar, Character endChar) {
         this.weightedGraph = weightedGraph;
@@ -33,7 +32,7 @@ public class GraphConfig implements Configuration<GraphConfig> {
         path.add(newChar);
     }
 
-    // simple getter, used for printing every path
+    // simple getter, used for printing every path in GraphConfigMain
     public ArrayList<Character> getPath() {
         return path;
     }
