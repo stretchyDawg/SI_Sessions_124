@@ -14,16 +14,6 @@ public class Converter {
             return temp*  9/5 + 32;
         }
     }
-    
-    public static TempConverter FtoC(){
-        return new TempConverter() {
-            @Override
-            public double convert(double f) {
-                return (f - 32) * 5/9;
-            }
-        };
-    }
-
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -35,7 +25,13 @@ public class Converter {
         System.out.println("C to F: " + ctof.convert());
 
         // F to C (Anon class)
-        System.out.println("F to C: " + FtoC().convert(temp));
+        TempConverter ftoc = new TempConverter() {
+            @Override
+            public double convert(double f) {
+                return (f - 32) * 5/9;
+            }
+        };
+        System.out.println("F to C: " + ftoc.convert(temp));
         
         // F to K (Lambda)
         TempConverter k = f -> (f-32)*5/9+273.15;

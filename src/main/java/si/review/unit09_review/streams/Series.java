@@ -1,4 +1,4 @@
-package si.review.unit09_review.series;
+package si.review.unit09_review.streams;
 import java.util.Optional;
 import java.util.stream.Stream;
 
