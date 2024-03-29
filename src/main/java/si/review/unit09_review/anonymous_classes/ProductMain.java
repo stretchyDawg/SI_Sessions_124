@@ -5,6 +5,7 @@ public class ProductMain {
         Product plushie = new Product("Plushie", 30);
         Product laptop = new Product("Laptop", 1000);
 
+        // Applying 50% discount for plushie regularly
         plushie.setDiscount(new HalfOff());
 
         // Applying 10% discount for laptop using anonymous inner class
