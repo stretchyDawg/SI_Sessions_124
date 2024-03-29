@@ -55,5 +55,8 @@ public class Album {
 
         // Displaying album information
         album.displayInfo();
+
+        System.out.println("\nArtist 1 info: " + album.artists.get(0).getName() + ", " + album.artists.get(0).getGenre());
+        System.out.println("\nArtist 2 info: " + album.artists.get(0).name + ", " + album.artists.get(0).genre); // same scope of container class
     }
 }
