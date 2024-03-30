@@ -5,9 +5,9 @@ public class ShapeMain {
         return Math.sqrt(3) * Math.pow (side, 2) / 4;
     }    
     
-    public static void main(String[] args) {
+    public static void main(String[] args) {   
         Shape circle = (radius) -> {
-           return Math.PI * Math.pow(radius, 2);
+            return Math.PI * Math.pow(radius, 2);
         };
         System.out.println(circle.area(2));
         

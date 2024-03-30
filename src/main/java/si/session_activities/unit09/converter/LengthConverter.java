@@ -9,8 +9,8 @@ public class LengthConverter {
         public MetersToFeetConverter() {}
 
         @Override
-        public double convertUnit(double value) {
-            return value * 3.28084;
+        public double convertUnit(double meters) {
+            return meters * 3.28084;
         }
     }
 

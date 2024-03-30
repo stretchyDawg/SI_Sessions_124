@@ -4,11 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Sum {
-    //static int sum = 0;
-
-
-
-
+    static int sum = 0;
 
     public static void main(String[] args) {
         List<Integer> numbers = new ArrayList<>();
@@ -18,8 +14,13 @@ public class Sum {
         numbers.add(4); // 10
         numbers.add(5); // 15
 
+        // Stream<Integer> numStream = numbers.stream();
+
         numbers.stream().forEach(System.out::println);
-        numbers.stream().forEach(num -> num = num * 2);
+        numbers.stream().forEach(num -> {
+            num = num * 2;
+            System.out.println(num);
+        });
         System.out.println();
         numbers.stream().forEach(System.out::println);
         System.out.println();
@@ -33,11 +34,9 @@ public class Sum {
 
 
 
-        // int sum = 0;
-        // numbers.stream().forEach(num -> sum += num);
-        // System.out.println(sum);
 
-
+        numbers.stream().forEach(num -> sum += num);
+        System.out.println(sum);
 
         int sum2 = numbers.stream().mapToInt(e -> e).sum();
         System.out.println("\n" + sum2);
