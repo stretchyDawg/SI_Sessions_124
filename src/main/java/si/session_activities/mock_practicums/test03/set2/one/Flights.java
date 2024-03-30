@@ -1,4 +1,4 @@
-package si.session_activities.mock_practicums.test03.set2;
+package si.session_activities.mock_practicums.test03.set2.one;
 
 import java.util.Arrays;
 import java.util.List;
