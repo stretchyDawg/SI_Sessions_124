@@ -1,4 +1,4 @@
-package si.review.unit09_review.anonymous_classes;
+package si.session_activities.mock_practicums.test03.set2.two;
 
 public class HalfOff implements Discount{
     @Override

@@ -20,12 +20,14 @@ public class RatInMazeConfig implements Configuration<RatInMazeConfig> {
         ArrayList<RatInMazeConfig> successors = new ArrayList<>();
 
         // Try moving down
-        if (row + 1 < maze.length && maze[row + 1][col] == 0) {        // if( you are not at the edge of the map AND the thing in front of you is not a wall )
+        if (row + 1 < maze.length && maze[row + 1][col] == 0) {       
+            // if( you are not at the edge of the map AND the thing in front of you is not a wall )
             successors.add(new RatInMazeConfig(maze, row + 1, col));
         }
 
         // Try moving right
-        if (col + 1 < maze[row].length && maze[row][col + 1] == 0) {   // if( you are not at the edge of the map AND the thing in front of you is not a wall )
+        if (col + 1 < maze[row].length && maze[row][col + 1] == 0) {   
+            // if( you are not at the edge of the map AND the thing in front of you is not a wall )
             successors.add(new RatInMazeConfig(maze, row, col + 1));
         }
 

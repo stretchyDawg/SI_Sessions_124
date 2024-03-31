@@ -22,42 +22,36 @@ public class Flights {
     public static Map<String,Integer> getFewestLayovers() {
         Map<String,Integer> fewestLayovers = new TreeMap<>();
 
-        /** Your solution for part A goes here **/
+        List<String> citiesList= Arrays.asList(CITIES);
 
-        List<String> list= Arrays.asList(CITIES);
-
-        for (int i=0;i<list.size();i++){
-            for (int p=0;p<list.size();p++){
-                if (i!=p){
-                    if (!(fewestLayovers.containsKey(list.get(i)+ ":"+ list.get(p)))){
-                        
-                        List<String> a = GRAPH.bfPath(list.get(i),list.get(p));
+        for (int i = 0; i < citiesList.size(); i++){
+            for (int j = 0; j < citiesList.size(); j++){
+                // Cant travel from Boston to Boston
+                if (i != j){
+                    if (!(fewestLayovers.containsKey(citiesList.get(i)+ ":"+ citiesList.get(j)))){
+                        List<String> a = GRAPH.bfPath(citiesList.get(i),citiesList.get(j));
                         if (a != null){
-                            fewestLayovers.put(list.get(i)+ ":"+ list.get(p), a.size()-2);
+                            fewestLayovers.put(citiesList.get(i)+ ":"+ citiesList.get(j), a.size()-2);
                         }
                     }
                 }
             }
         }
-        
         return fewestLayovers;
     }
 
     public static Map<String,Integer> getLowestCosts() {
         Map<String,Integer> lowestCosts = new TreeMap<>();
 
-        /** Your solution for part B goes here **/
+        List<String> citiesList = Arrays.asList(CITIES);
 
-        List<String> list= Arrays.asList(CITIES);
-
-        for (int i=0;i<list.size();i++){
-            for (int p=0;p<list.size();p++){
-                if (i!=p){
-                    if (!(lowestCosts.containsKey(list.get(i)+ ":"+ list.get(p)))){
-                        
-                        WPath<String> a = WGRAPH.dijkstrasPath(list.get(i),list.get(p));
+        for (int i = 0; i < citiesList.size(); i++){
+            for (int j = 0; j < citiesList.size(); j++){
+                if (i != j){
+                    if (!(lowestCosts.containsKey(citiesList.get(i)+ ":"+ citiesList.get(j)))){
+                        WPath<String> a = WGRAPH.dijkstrasPath(citiesList.get(i), citiesList.get(j));
                         if (a != null){
-                            lowestCosts.put(list.get(i)+ ":"+ list.get(p), (int)a.getDistance());
+                            lowestCosts.put(citiesList.get(i)+ ":"+ citiesList.get(j), (int)a.getDistance());
                         }
                     }
                 }

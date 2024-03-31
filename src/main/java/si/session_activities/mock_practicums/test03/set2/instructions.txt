@@ -20,24 +20,82 @@ Format:
 
 —--------------------------------------------------------------------------------------
 1: Microsoft Flight Simulator (Algorithms -- 30 Points)
+So, if someone wants to book a flight I think most people look for either one of two things. They are either very 
+broke so they want the cheapest flight, or they want to be at their destination quickly so they choose the shortest 
+flight route.
 
+Take a look at Flights.java. You are given two graphs, one weighted and one unweighted, populated with cities. Additionally,
+at the bottom there is a main method and two stubbed out methods. Your job is going to be to implement the two stubbed out 
+methods. For testing purposes, you have been given a flight_output.txt file that writes out the expected output. 
 
+METHOD A: getFewestLayovers()
+- Returns the shortest numbers of layovers between two cities, for every city in the graph. 
+- You will specifically be returning a map of <String, Integer>. 
+  - The String should look like this: 'Starting-City : Destination City'
+  - The Integer is the amount of layovers.
+
+Example: Atlanta:Boston 1 
+(This means There is only 1 layover from Atlanta to Boston. Plot Twist: Will the path from Atlanta to Boston have 1 city?)
+
+METHOD B: getLowestCost()
+- Returns the lowest cost it takes to travel between two cities, for every city in the graph.
+- Also returns a map of <String, Integer>.
+  - The String should look like this: 'Starting-City : Destination City'
+  - The Integer is the cost.
+
+Example: Buffalo:Rochester 72
+—--------------------------------------------------------------------------------------
 2: Discounts! (Inner Classes, Anon Classes & Lambdas -- 30 Points)
-You have been provided a Product.java class which represents some product in a grocery store. Every
-product has a name and a price. Along with that, there's a simple constructor and some getters. Also
-take note of the Discount field, you'll be implementing it:
+You have been provided a Product.java class (do NOT mess with any code inside of the class) which represents 
+some product in a grocery store. Every product has a name and a price. Along with that, there's a simple constructor 
+and some getters. Also take note of the Discount field, you'll be implementing it:
 
 a: Create a file named Discount.java, set it to be a functional interface. The method  in the interface
    is called 'applyDiscount(double price)' and it will return a double.
 
 b: Create a ProductMain.java file and add a main method inside.
 
-c: 
+c: Create a HalfOff.java class that implements the Discount interface. Have the applyDiscount method return
+half of the given price. In ProductMain.java, create a Product and set its discount to an instance of the 
+HalfOff class.
 
+d: Use an INNER CLASS to define a Discount implementation in ProductMain.java. Then, create a Product and 
+set its discount to an instance of the HalfOff class.
 
+e: Use an ANONYMOUS CLASS to define a Discount implementation in ProductMain.java. Then create a Product and
+do the same thing as the previous questions.
+
+f: Use a LAMBDA to define a Discount implementation in ProductMain.java. You know the rest.
+—--------------------------------------------------------------------------------------
 3: Rat in a Maze (Backtracking -- 35 Points)
+The Rat in a Maze puzzle is a common puzzle that is taught when learning Backtracking. The goal is there is a 
+rat that starts at the top right of the map. He has to get to the bottom left of the map. The rat can only move
+to the right and down, it cannot go left or up. It also cannot go backwards. 
 
+In this case, our map will look something like this:
+0 1 0 1 0
+0 0 0 1 0     1 = Wall
+1 1 0 0 0     0 = Open Space
+0 0 0 1 0
 
+For the rat to solve this maze, they must take this path (path shown as '%'):
+% 1 0 1 0
+% % % 1 0     1 = Wall
+1 1 % % %     0 = Open Space
+0 0 0 1 %
+
+You have been provided with two files:
+RatInMazeMain.java: 
+- Provides a given solve() method. Just run simply this file to see if you have implemented things correctly.
+
+RatInMazeConfig.java: 
+- Has a maze field representing the current configuration of the maze, and a column and row field which represent 
+  the current position of the rat.
+- Contains three stubbed out methods that you will be tasked with writing:
+   - isValid(): Returns a boolean representing if a configuration is valid.
+   - isGoal(): Returns a boolean representing if a configuration is the goal.
+   - getSuccessors(): Returns a collection of all DIRECT successors from the current configuration.
+—--------------------------------------------------------------------------------------
 4: Creating Streams (Streams -- 5 Points)
 Create a StreamMain.java class that only has a main method. Inside of that main method you will create a 
 list of integers from 1-5. With that list, you must use streams to accomplish these three tasks:

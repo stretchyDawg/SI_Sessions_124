@@ -6,7 +6,6 @@ public class ProductMain {
         public double applyDiscount(double price) {
             return price * .9;
         }
-
     }
     
     public static void main(String[] args) { 
