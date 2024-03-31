@@ -22,7 +22,17 @@ Format:
 1: Microsoft Flight Simulator (Algorithms -- 30 Points)
 
 
-2: Discounts EVERYWHERE (Inner Classes, Anon Classes & Lambdas -- 30 Points)
+2: Discounts! (Inner Classes, Anon Classes & Lambdas -- 30 Points)
+You have been provided a Product.java class which represents some product in a grocery store. Every
+product has a name and a price. Along with that, there's a simple constructor and some getters. Also
+take note of the Discount field, you'll be implementing it:
+
+a: Create a file named Discount.java, set it to be a functional interface. The method  in the interface
+   is called 'applyDiscount(double price)' and it will return a double.
+
+b: Create a ProductMain.java file and add a main method inside.
+
+c: 
 
 
 3: Rat in a Maze (Backtracking -- 35 Points)

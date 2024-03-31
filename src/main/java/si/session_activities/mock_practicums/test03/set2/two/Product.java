@@ -10,6 +10,17 @@ public class Product {
         this.price = price;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public Discount getDiscount() {
+        return discount;
+    }
     public void setDiscount(Discount discount) {
         this.discount = discount;
     }
@@ -19,9 +30,5 @@ public class Product {
             return discount.applyDiscount(price);
         }
         return price;
-    }
-
-    public String getName() {
-        return name;
     }
 }
