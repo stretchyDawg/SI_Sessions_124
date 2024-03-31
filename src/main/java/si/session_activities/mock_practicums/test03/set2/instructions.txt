@@ -1,0 +1,37 @@
+GCIS-124 SI Mock Practicum
+Time: 40 Minutes (you have 55 minutes (half the 110 minute period) to do your real practicum)
+
+Welcome! You may do each problem in any order as you please. I would suggest you do the questions
+that cover topics you are not familiar with FIRST. Get some practice with the hard stuff first. 
+
+This session is a SAFE SPACE to get things wrong. When learning new concepts, since you are human 
+you will definitely get things wrong. You might as well get it wrong at the SI Session instead of 
+the real test. So give the frustrating questions a shot and ask your group table or me for help! 
+
+Also I added points for you to grades yourselves!
+
+------- ^ READ THIS TEXT ABOVE QUICKLY FIRST ^ -------
+
+Format:
+1: Graphs and Search Algorithms (30 Points)
+2: Inner Classes, Anon Classes, & Lambdas (30 Points)
+3: Backtracking (35 Points)
+4: Streams (5 Points)
+
+—--------------------------------------------------------------------------------------
+1: Microsoft Flight Simulator (Algorithms -- 30 Points)
+
+
+2: Discounts EVERYWHERE (Inner Classes, Anon Classes & Lambdas -- 30 Points)
+
+
+3: Rat in a Maze (Backtracking -- 35 Points)
+
+
+4: Creating Streams (Streams -- 5 Points)
+Create a StreamMain.java class that only has a main method. Inside of that main method you will create a 
+list of integers from 1-5. With that list, you must use streams to accomplish these three tasks:
+
+- Print out every even number (for 1-5, you’d print out 2 and 4)
+- Find the sum of every integer in the list (for 1-5 it’s 15)
+- Return the number of integers greater than 3 (for 1-5 it’s 2)

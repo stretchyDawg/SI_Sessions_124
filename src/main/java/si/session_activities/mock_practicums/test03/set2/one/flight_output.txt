@@ -1,0 +1,183 @@
+Fewest Layovers
+Atlanta:Boston 1
+Atlanta:Buffalo 0
+Atlanta:Chicago 1
+Atlanta:Houston 0
+Atlanta:Miami 0
+Atlanta:Rochester 1
+Atlanta:San Diego 1
+Atlanta:Seattle 2
+Atlanta:Topeka 1
+Boston:Atlanta 1
+Boston:Buffalo 1
+Boston:Chicago 0
+Boston:Houston 1
+Boston:Miami 0
+Boston:Rochester 0
+Boston:San Diego 1
+Boston:Seattle 0
+Boston:Topeka 2
+Buffalo:Atlanta 0
+Buffalo:Boston 1
+Buffalo:Chicago 0
+Buffalo:Houston 1
+Buffalo:Miami 1
+Buffalo:Rochester 0
+Buffalo:San Diego 2
+Buffalo:Seattle 1
+Buffalo:Topeka 2
+Chicago:Atlanta 1
+Chicago:Boston 0
+Chicago:Buffalo 0
+Chicago:Houston 0
+Chicago:Miami 1
+Chicago:Rochester 1
+Chicago:San Diego 1
+Chicago:Seattle 0
+Chicago:Topeka 1
+Houston:Atlanta 0
+Houston:Boston 1
+Houston:Buffalo 1
+Houston:Chicago 0
+Houston:Miami 1
+Houston:Rochester 2
+Houston:San Diego 1
+Houston:Seattle 1
+Houston:Topeka 0
+Miami:Atlanta 0
+Miami:Boston 0
+Miami:Buffalo 1
+Miami:Chicago 1
+Miami:Houston 1
+Miami:Rochester 1
+Miami:San Diego 0
+Miami:Seattle 1
+Miami:Topeka 1
+Rochester:Atlanta 1
+Rochester:Boston 0
+Rochester:Buffalo 0
+Rochester:Chicago 1
+Rochester:Houston 2
+Rochester:Miami 1
+Rochester:San Diego 2
+Rochester:Seattle 1
+Rochester:Topeka 3
+San Diego:Atlanta 1
+San Diego:Boston 1
+San Diego:Buffalo 2
+San Diego:Chicago 1
+San Diego:Houston 1
+San Diego:Miami 0
+San Diego:Rochester 2
+San Diego:Seattle 0
+San Diego:Topeka 0
+Seattle:Atlanta 2
+Seattle:Boston 0
+Seattle:Buffalo 1
+Seattle:Chicago 0
+Seattle:Houston 1
+Seattle:Miami 1
+Seattle:Rochester 1
+Seattle:San Diego 0
+Seattle:Topeka 1
+Topeka:Atlanta 1
+Topeka:Boston 2
+Topeka:Buffalo 2
+Topeka:Chicago 1
+Topeka:Houston 0
+Topeka:Miami 1
+Topeka:Rochester 3
+Topeka:San Diego 0
+Topeka:Seattle 1
+
+Lowest Cost
+Atlanta:Boston 450
+Atlanta:Buffalo 178
+Atlanta:Chicago 453
+Atlanta:Houston 429
+Atlanta:Miami 99
+Atlanta:Rochester 250
+Atlanta:San Diego 812
+Atlanta:Seattle 774
+Atlanta:Topeka 794
+Boston:Atlanta 450
+Boston:Buffalo 272
+Boston:Chicago 547
+Boston:Houston 784
+Boston:Miami 549
+Boston:Rochester 200
+Boston:San Diego 1143
+Boston:Seattle 868
+Boston:Topeka 1149
+Buffalo:Atlanta 178
+Buffalo:Boston 272
+Buffalo:Chicago 275
+Buffalo:Houston 512
+Buffalo:Miami 277
+Buffalo:Rochester 72
+Buffalo:San Diego 871
+Buffalo:Seattle 596
+Buffalo:Topeka 877
+Chicago:Atlanta 453
+Chicago:Boston 547
+Chicago:Buffalo 275
+Chicago:Houston 237
+Chicago:Miami 552
+Chicago:Rochester 347
+Chicago:San Diego 596
+Chicago:Seattle 321
+Chicago:Topeka 602
+Houston:Atlanta 429
+Houston:Boston 784
+Houston:Buffalo 512
+Houston:Chicago 237
+Houston:Miami 528
+Houston:Rochester 584
+Houston:San Diego 833
+Houston:Seattle 558
+Houston:Topeka 365
+Miami:Atlanta 99
+Miami:Boston 549
+Miami:Buffalo 277
+Miami:Chicago 552
+Miami:Houston 528
+Miami:Rochester 349
+Miami:San Diego 713
+Miami:Seattle 873
+Miami:Topeka 893
+Rochester:Atlanta 250
+Rochester:Boston 200
+Rochester:Buffalo 72
+Rochester:Chicago 347
+Rochester:Houston 584
+Rochester:Miami 349
+Rochester:San Diego 943
+Rochester:Seattle 668
+Rochester:Topeka 949
+San Diego:Atlanta 812
+San Diego:Boston 1143
+San Diego:Buffalo 871
+San Diego:Chicago 596
+San Diego:Houston 833
+San Diego:Miami 713
+San Diego:Rochester 943
+San Diego:Seattle 275
+San Diego:Topeka 472
+Seattle:Atlanta 774
+Seattle:Boston 868
+Seattle:Buffalo 596
+Seattle:Chicago 321
+Seattle:Houston 558
+Seattle:Miami 873
+Seattle:Rochester 668
+Seattle:San Diego 275
+Seattle:Topeka 747
+Topeka:Atlanta 794
+Topeka:Boston 1149
+Topeka:Buffalo 877
+Topeka:Chicago 602
+Topeka:Houston 365
+Topeka:Miami 893
+Topeka:Rochester 949
+Topeka:San Diego 472
+Topeka:Seattle 747

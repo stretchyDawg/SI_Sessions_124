@@ -23,5 +23,5 @@ public class ProductMain {
 
         System.out.println("Product: " + plushie.getName());
         System.out.println("Price after discount: $" + plushie.getPriceAfterDiscount());
-        }
+    }
 }

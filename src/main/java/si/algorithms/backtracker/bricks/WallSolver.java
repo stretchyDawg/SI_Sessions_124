@@ -6,9 +6,9 @@ import java.util.Collection;
 import si.algorithms.backtracker.Configuration;
 
 public class WallSolver implements Configuration<WallSolver>{
-
     private BrickWall wall;
     private ArrayList<Integer> list;
+
     public BrickWall getBrickWall() {
         return wall;
     }
