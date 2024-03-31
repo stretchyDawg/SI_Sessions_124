@@ -69,7 +69,7 @@ f: Use a LAMBDA to define a Discount implementation in ProductMain.java. You kno
 —--------------------------------------------------------------------------------------
 3: Rat in a Maze (Backtracking -- 35 Points)
 The Rat in a Maze puzzle is a common puzzle that is taught when learning Backtracking. The goal is there is a 
-rat that starts at the top right of the map. He has to get to the bottom left of the map. The rat can only move
+rat that starts at the top left of the map. He has to get to the bottom right of the map. The rat can only move
 to the right and down, it cannot go left or up. It also cannot go backwards. 
 
 In this case, our map will look something like this:
