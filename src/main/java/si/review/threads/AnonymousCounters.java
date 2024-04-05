@@ -17,13 +17,15 @@ public class AnonymousCounters {
         for(int i = 0; i < n; i++){
             Thread countThread = null;
             String name = "Counter " + i;
-            if(i % 2 == 0){                                          // Made so that it uses each method every other iteration
-                countThread = new Thread(new Runnable(){
-                    public void run(){ counter (name); }             // Anon Class
+            if(i % 2 == 0){                                     
+                countThread = new Thread(new Runnable(){ // Anon Class
+                    public void run(){ 
+                        counter(name); 
+                    }             
                 });
             }
             else{
-                countThread = new Thread (() -> counter(name));      // Lambda
+                countThread = new Thread (() -> counter(name)); // Lambda
             }
             countThread.start();
         }
