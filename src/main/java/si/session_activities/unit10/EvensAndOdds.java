@@ -38,7 +38,6 @@ public class EvensAndOdds extends Thread{
     }
 
     public static void main(String[] args) {
-        
         Thread odd = new EvensAndOdds("Odd");
         odd.start();
         Thread even = new EvensAndOdds("Even");
