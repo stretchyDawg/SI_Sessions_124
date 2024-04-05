@@ -1,8 +1,6 @@
 package si.review.threads;
 
 public class Countdown implements Runnable {
-
-
     @Override
     public void run() {
         for(int i = 10; i > 0; i--){
