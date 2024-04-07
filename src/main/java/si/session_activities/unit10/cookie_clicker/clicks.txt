@@ -1,0 +1,7 @@
+Hello, this is a sample text written to a file.
+Hello, this is a sample text written to a file.
+Hello, this is a sample text written to a file.
+Hello, this is a sample text written to a file.
+Hello, this is a sample text written to a file.
+<end game instance>
+

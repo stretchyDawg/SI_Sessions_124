@@ -1,7 +1,5 @@
 package si.session_activities.unit10;
 
-import java.util.stream.IntStream;
-
 public class SI_Hund {
     public static void main(String[] args) {
         // Thread threadEven = new Thread(() -> IntStream.range(0, 100).filter(n -> n % 2 == 0).forEach(System.out::println)); 
@@ -40,7 +38,6 @@ public class SI_Hund {
         try {
             Thread.sleep(500);
         } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         odd.start();

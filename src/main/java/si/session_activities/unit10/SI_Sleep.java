@@ -43,8 +43,6 @@ public class SI_Sleep {
         Thread b = new Thread(new Racer("B", 2));
         Thread c = new Thread(new Racer("C", 3));
 
-        Thread d = new Thread(() -> System.out.println("Fart"));
-
         a.start();
         b.start();
         c.start();
