@@ -27,7 +27,7 @@ public class CookieClicker {
         
         while(!input.equals("exit")){
             if(input.equals("help")){
-                System.out.println("Commands: \n\t\"click\" - Clicks the cookie.\n\t\"cursor\" - Adds a cursor for 20 clicks.\n\t\"grandma\" - Adds a grandma for 100 clicks.\n\t\"help\" - Opens up list of commands.\n");
+                System.out.println("Commands: \n\t\"click\" - Clicks the cookie.\n\t\"cursor\" - Adds a cursor for 20 clicks.\n\t\"grandma\" - Adds a grandma for 100 clicks.\n\t\"farm\" - Adds a farm for 500 clicks.\n\t\"super grandma\" - Adds a Super Grandma for 1000 clicks.\n\t\"help\" - Opens up list of commands.\n\t\"exit\" - Exits the game.\n");
             }
             else if(input.equals("click")){
                 click(writer);
@@ -52,6 +52,28 @@ public class CookieClicker {
                 }
                 else{
                     System.out.println("Not enough for a grandma! <Need 100 clicks>");
+                }
+            }
+            else if(input.equals("farm")){
+                if(clicks >= 500){
+                    System.out.println("Made farm!");
+                    clicks = clicks - 500;
+                    Thread thread = new Thread(new Farm(writer));
+                    thread.start();
+                }
+                else{
+                    System.out.println("Not enough for a farm! <Need 500 clicks>");
+                }
+            }
+            else if(input.equals("super grandma")){
+                if(clicks >= 1000){
+                    System.out.println("Made SUPER grandma!");
+                    clicks = clicks - 1000;
+                    Thread thread = new Thread(new Grandma(writer));
+                    thread.start();
+                }
+                else{
+                    System.out.println("Not enough for a super grandma! <Need 1000 clicks>");
                 }
             }
             System.out.print("(Clicks: " + clicks + ") >> ");
