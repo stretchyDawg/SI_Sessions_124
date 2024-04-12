@@ -13,8 +13,8 @@ public class TheCount implements Runnable{
         System.out.println("Counter: " + id + " is starting...");
         
         for(int i = 0; i < 100000; i++){
+            // System.out.println(this.id + " : " + i + " looping...");     // <-- Uncomment this to see what's looping
             synchronized(COUNT){                                // <-- Putting this on the inside of the for loop makes it faster as they are looping through the for loop all at once.
-            // System.out.println(this.id + " looping...");     // <-- Uncomment this to see what's looping
                 COUNT[0]++;
             }
         }
