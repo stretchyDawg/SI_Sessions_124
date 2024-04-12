@@ -33,7 +33,7 @@ public class Waiter implements Runnable{
             Thread.sleep(1000);
         }
         synchronized(lock){
-            lock.notifyAll();
+            lock.notify();
             System.out.println("Thread notified!");
         }
 
