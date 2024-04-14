@@ -38,7 +38,7 @@ public class SI_Faria implements Runnable {
     public static void main(String[] args) throws InterruptedException {
         Object lock = new Object();
 
-        Thread[] threads = new Thread[2];
+        //Thread[] threads = new Thread[2];
     
         SI_Faria runnable = new SI_Faria("Alpha", lock);
         SI_Faria runnable2 = new SI_Faria("Num", lock);

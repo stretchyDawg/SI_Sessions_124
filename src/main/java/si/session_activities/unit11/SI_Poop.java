@@ -1,8 +1,8 @@
 package si.session_activities.unit11;
 
-import java.util.List;
+// import java.util.List;
 
-import java.util.ArrayList;
+// import java.util.ArrayList;
 
 public class SI_Poop implements Runnable{
     private String name;
