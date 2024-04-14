@@ -18,7 +18,7 @@ public class PingPong {
                                 lock.wait();
                             } catch (InterruptedException e) {}
                         }
-                        System.out.println("Ping");
+                        System.out.println("\t\tPing");
                         pingTurn = false; // Switch turn to Pong
                         lock.notifyAll(); // Notify the Pong thread
                     }

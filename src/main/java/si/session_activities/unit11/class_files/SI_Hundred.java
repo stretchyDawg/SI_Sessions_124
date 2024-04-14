@@ -1,4 +1,4 @@
-package si.session_activities.unit11;
+package si.session_activities.unit11.class_files;
 
 /**
  * 1 TO 100 UNLOCKED STYLE:

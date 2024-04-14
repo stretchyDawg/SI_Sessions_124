@@ -1,4 +1,4 @@
-package si.session_activities.unit11;
+package si.session_activities.unit11.class_files;
 
 /**
  * COUNTER:
