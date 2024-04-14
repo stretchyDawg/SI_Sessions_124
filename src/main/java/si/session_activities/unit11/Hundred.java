@@ -3,12 +3,14 @@ package si.session_activities.unit11;
 public class Hundred {
     private static final Object lock = new Object();
     private static int currentNumber = 1;
+    private static char currentChar = 1;
 
     public static void main(String[] args) {
+        
         Thread oddThread = new Thread(new Runnable() {
             @Override
             public void run() {
-                while (currentNumber < 100) {
+                while (currentNumber <= 50) {
                     synchronized (lock) {
                         if (currentNumber % 2 == 1) { 
                             System.out.println(currentNumber);
@@ -27,7 +29,7 @@ public class Hundred {
         Thread evenThread = new Thread(new Runnable() {
             @Override
             public void run() {
-                while (currentNumber <= 100) {
+                while (currentChar <= 50) {
                     synchronized (lock) {
                         if (currentNumber % 2 == 0) { 
                             System.out.println(currentNumber);
