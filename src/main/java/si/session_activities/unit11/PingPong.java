@@ -11,7 +11,7 @@ public class PingPong {
                 for (int i = 0; i < 10; i++) {
                     synchronized(lock) {
                         try {
-                            Thread.sleep(100);
+                            Thread.sleep(321);
                         } catch (InterruptedException e) {}
                         while (!pingTurn) {
                             try {
@@ -31,7 +31,7 @@ public class PingPong {
                 for (int i = 0; i < 10; i++) {
                     synchronized (lock) {
                         try {
-                            Thread.sleep(100);
+                            Thread.sleep(123);
                         } catch (InterruptedException e) {}
                         while (pingTurn) {
                             try {

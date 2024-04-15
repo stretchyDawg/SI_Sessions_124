@@ -2,21 +2,58 @@ package si.session_activities.unit11.class_files;
 
 
 /**
- * PING PONG:
-With your partner, create a PingPong.java file with a main method.
-- Step 1: Inside the class, create a lock field same as before and a static boolean field 
-          called isPing.
-- Step 2: In the main method, create two threads, a Ping thread and a Pong thread. You 
-          can make them any way you want (I suggest using anon classes). In both of them, 
-          put a for loop that loops 10 times (this is done to simulate 10 turns). 
-- Step 3a: The Ping thread should print "Ping" when pingTurn is true.
-- Step 3b: The Pong thread should print "Pong" when pingTurn is false.
-- Step 4: In each thread, synchronize on the lock object and use wait() and notifyAll() 
-          to manage which thread is allowed to print its message. The thread that just 
-          printed should call notifyAll() and then immediately call wait() to allow the 
-          other thread to run.
-- Step 5: In the main method, start both threads
+    PING PONG:
+    With your partner, create a PingPong.java file with a main method.
+    - Step 1: Inside the class, create a static lock field same as 
+              before and a static boolean field called isPing.
+    - Step 2: In the main method, create two threads, a Ping 
+              thread and a Pong thread.
+    - Step 2a: The Ping thread should print "\t\tPing" when 
+               isPing is true **10 times**. (You need the '\t\t')
+    - Step 2b: The Pong thread should print "Pong" when 
+               isPing is false **10 times**.
+    - Step 3: Start the two threads and see the outcome. 
+    - Step 4: Have it so that the outcome prints Ping and 
+              Pong in alternating order (\t\tPing... Pong... \t\tPing... etc...) 
+    - Step 5: In the main method, start both threads and see the outcome :)
  */
 public class SI_PingPong {
-    
+    private static Object key;
+    private static boolean isPong;
+
+    public static void main(String[] args) {
+        key = new Object();
+        
+        Thread ping = new Thread(() -> {
+            for (int i = 0; i < 10; i++) {
+                synchronized(key){
+                    if(isPong){
+                        System.out.println("\t\tPing");
+                        try {
+                            key.wait();
+                        } catch (InterruptedException e) {}
+                    }
+                    isPong = !isPong;
+                    key.notifyAll();
+                }
+            }
+        });
+        Thread pong = new Thread(() -> {
+            for (int i = 0; i < 10; i++) {
+                synchronized(key){
+                    if(!isPong){
+                        System.out.println("Pong");
+                        try {
+                            key.wait();
+                        } catch (InterruptedException e) {}
+                    }
+                    isPong = !isPong;
+                    key.notifyAll();
+                }
+            }
+        });
+
+        ping.start();
+        pong.start();
+    }
 }
