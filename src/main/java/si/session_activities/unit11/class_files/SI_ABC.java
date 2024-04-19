@@ -1,7 +1,7 @@
 package si.session_activities.unit11.class_files;
 
 /*
-    JACKSON 5 (ABC, 123):
+    ABC, 123:
     With your partner, create a ABC.java file with just a main method:
     - Step 1a: Inside the main method, create a thread that prints 
                out the alphabet a letter at the time. (A... B... C... etc...)
