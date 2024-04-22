@@ -17,18 +17,18 @@ public class Duplexer {
         this.out = new PrintWriter(socket.getOutputStream());
     }
 
-    public void send(String message){
-
-    }
-
-    public void receive(String message){
-
-    }
-
     public void close() throws IOException{
         this.socket.close();
         this.in.close();
         this.out.close();
     }
 
+    public void send(String message){
+        this.out.println(message);
+        this.out.flush();
+    }
+
+    public String receive(){
+        return this.in.nextLine();
+    }
 }
