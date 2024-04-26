@@ -13,11 +13,11 @@ public class CookieClickerServer {
     private int cookies;
 
     public CookieClickerServer(int port) throws IOException {
-        InetAddress inet = InetAddress.getLocalHost();
-        this.cookies = 0;
-        
         this.serverSocket = new ServerSocket(port);
-        System.out.println("\nCookie Clicker Server!\nServer Address: " + inet.getHostAddress() + "\nServer Port " + port);
+        System.out.println("\nCookie Clicker Server! " + 
+                           "\nServer Address: " + InetAddress.getLocalHost().getHostAddress() + 
+                           "\nServer Port " + port);
+        this.cookies = 0;
     }
 
     public void start() {
@@ -32,7 +32,14 @@ public class CookieClickerServer {
                 message = duplexer.read();
                 message = message.toLowerCase();
                 if(message.equals("help")){
-                    System.out.println("\nCommands: \n\t\"click\" - Clicks the cookie.\n\t\"cursor\" - Adds a cursor for 20 clicks.\n\t\"grandma\" - Adds a grandma for 100 clicks.\n\t\"farm\" - Adds a farm for 500 clicks.\n\t\"super grandma\" - Adds a Super Grandma for 1000 clicks.\n\t\"exit\" - Exits the game.\n");
+                    System.out.println("\nCommands: \n\t" + 
+                        "\"click\" - Clicks the cookie.\n\t" + 
+                        "\"cursor\" - Adds a cursor for 20 clicks.\n\t" + 
+                        "\"grandma\" - Adds a grandma for 100 clicks.\n\t" + 
+                        "\"farm\" - Adds a farm for 500 clicks.\n\t" + 
+                        "\"super grandma\" - Adds a Super Grandma for 1000 clicks.\n\t" + 
+                        "\"exit\" - Exits the game.\n"
+                    );
                 }
                 else if(message.equals("click")){
                     this.cookies++;
