@@ -18,21 +18,20 @@ public class CookieClickerClient {
     }
 
     public void start() {
-        try {
-            String input;
-            while(true){
-                System.out.print(">> ");
-                input = scanner.nextLine();
-                this.duplexer.send(input);
-                if(input.toLowerCase().equals("exit")){
-                    break;
-                }            
-            }
-            try {
-                this.duplexer.close();
-                this.scanner.close();
-            } catch (IOException e) {e.printStackTrace();}
-        } catch (Exception e) {e.printStackTrace();} 
+        String input;
+        while(true){
+            System.out.print(">> ");
+            input = scanner.nextLine();
+            this.duplexer.send(input);
+            if(input.toLowerCase().equals("exit")){
+                break;
+            }            
+        }
+    }
+
+    public void close() throws IOException {
+        this.duplexer.close();
+        this.scanner.close();
     }
 
     public static void main(String[] args) {
@@ -40,7 +39,7 @@ public class CookieClickerClient {
             CookieClickerClient client = new CookieClickerClient("localhost", 1234); // Connect to server at localhost:1234
             client.start();
         } catch (IOException e) {
-            System.out.println("Unable to connect to server: " + e.getMessage());
+            System.out.println("No server found on port 1234..");
         }
     }
 }
