@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.net.Socket;
 import java.util.Scanner;
 
+import si.review.networking_review.duplexer.Duplexer;
+
 public class SumClient {
     private Duplexer duplexer;
     private Scanner userIn;
@@ -32,7 +34,4 @@ public class SumClient {
     public static void main(String[] args) throws IOException {
         new SumClient(9999);
     }
-
-        //this does not work 
-
 }

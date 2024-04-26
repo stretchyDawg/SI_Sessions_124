@@ -23,13 +23,10 @@ public class CookieClickerClient {
             while(true){
                 System.out.print(">> ");
                 input = scanner.nextLine();
+                this.duplexer.send(input);
                 if(input.toLowerCase().equals("exit")){
-                    this.duplexer.send(input);
                     break;
-                }
-                else{
-                    this.duplexer.send(input);
-                }                
+                }            
             }
             try {
                 this.duplexer.close();
