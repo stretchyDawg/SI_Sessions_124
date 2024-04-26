@@ -14,7 +14,7 @@ public class CookieClickerClient {
         Socket socket = new Socket(host, port);
         this.duplexer = new Duplexer(socket);
         this.scanner = new Scanner(System.in);
-        System.out.println("Connected to server with port " + port + ".");
+        System.out.println("\nConnected to server with port " + port + ".");
     }
 
     public void start() {
@@ -23,7 +23,8 @@ public class CookieClickerClient {
             while(true){
                 System.out.print(">> ");
                 input = scanner.nextLine();
-                if(input.equals("exit")){
+                if(input.toLowerCase().equals("exit")){
+                    this.duplexer.send(input);
                     break;
                 }
                 else{
