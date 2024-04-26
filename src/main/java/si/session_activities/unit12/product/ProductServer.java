@@ -1,4 +1,4 @@
-package si.session_activities.unit12;
+package si.session_activities.unit12.product;
 
 import java.io.IOException;
 import java.net.ServerSocket;

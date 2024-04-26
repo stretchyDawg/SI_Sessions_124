@@ -11,7 +11,7 @@ public class CookieClickerClient {
     private Scanner scanner;
 
     public CookieClickerClient(String host, int port) throws IOException {
-        Socket socket = new Socket(host, port);
+        Socket socket = new Socket(host, 54321);
         this.duplexer = new Duplexer(socket);
         this.scanner = new Scanner(System.in);
         System.out.println("\nConnected to server with port " + port + ".");
