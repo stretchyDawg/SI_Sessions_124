@@ -11,19 +11,35 @@ public class Receiver {
 
     public static void main(String[] args) throws IOException {
         
-        try (ServerSocket serverSocket = new ServerSocket(portNum)) {
-            System.out.println("\nServer is listening on port " + Integer.toString(portNum) +": ");
+        ServerSocket serverSocket = new ServerSocket(portNum); 
+        System.out.println("\nServer is listening on port " + Integer.toString(portNum) +": ");
             
             // Longest line of code ever lol
-            try(Socket clientSocket = serverSocket.accept(); 
-                BufferedReader reader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))) {
-                String line;
-                while ((line = reader.readLine()) != null) {
-                    System.out.print(clientSocket.getInetAddress().getHostName() +": ");
-                    System.out.println(line);
-                }
-            }
+        Socket clientSocket = serverSocket.accept(); 
+        BufferedReader reader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+        String line;
+        while ((line = reader.readLine()) != null) {
+            System.out.print(clientSocket.getInetAddress().getHostName() +": ");
+            System.out.println(line);
         }
+        serverSocket.close();
+            
+        
+
+
+        // try (ServerSocket serverSocket = new ServerSocket(portNum)) {
+        //     System.out.println("\nServer is listening on port " + Integer.toString(portNum) +": ");
+            
+        //     // Longest line of code ever lol
+        //     try(Socket clientSocket = serverSocket.accept(); 
+        //         BufferedReader reader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))) {
+        //         String line;
+        //         while ((line = reader.readLine()) != null) {
+        //             System.out.print(clientSocket.getInetAddress().getHostName() +": ");
+        //             System.out.println(line);
+        //         }
+        //     }
+        // }
 
     }
 }

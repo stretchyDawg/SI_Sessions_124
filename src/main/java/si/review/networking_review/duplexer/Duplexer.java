@@ -28,7 +28,7 @@ public class Duplexer {
         this.out.flush();
     }
 
-    public String receive(){
+    public String read(){
         return this.in.nextLine();
     }
 }
