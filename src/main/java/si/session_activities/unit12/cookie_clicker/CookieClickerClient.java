@@ -17,7 +17,7 @@ public class CookieClickerClient {
         System.out.println("\nConnected to server with port " + port + ".");
     }
 
-    public void start() {
+    public void start() throws IOException {
         String input;
         while(true){
             System.out.print(">> ");
@@ -27,6 +27,7 @@ public class CookieClickerClient {
                 break;
             }            
         }
+        this.close();
     }
 
     public void close() throws IOException {
@@ -39,7 +40,7 @@ public class CookieClickerClient {
             CookieClickerClient client = new CookieClickerClient("localhost", 1234); // Connect to server at localhost:1234
             client.start();
         } catch (IOException e) {
-            System.out.println("No server found on port 1234..");
+            System.out.println("No server found on port 1234...");
         }
     }
 }
