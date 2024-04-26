@@ -47,8 +47,7 @@ public class CookieClickerServer {
                 else if(message.equals("cursor")){ // Adds one to cookies every second for 20
                     if(this.cookies >= 20){
                         this.cookies -= 20;
-
-
+                        
                         Thread cursor = new Thread(() -> {
                             while(true){
                                 try {
