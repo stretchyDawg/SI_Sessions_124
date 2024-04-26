@@ -1,6 +1,7 @@
 package si.session_activities.unit12.cookie_clicker;
 
 import java.io.IOException;
+import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -12,17 +13,18 @@ public class CookieClickerServer {
     private int cookies;
 
     public CookieClickerServer(int port) throws IOException {
+        InetAddress inet = InetAddress.getLocalHost();
         this.cookies = 0;
         
         this.serverSocket = new ServerSocket(port);
-        System.out.println("\nServer is listening on port " + port);
+        System.out.println("\nCookie Clicker Server!\nServer Address: " + inet.getHostAddress() + "\nServer Port " + port);
     }
 
     public void start() {
         try {
-            System.out.println("Waiting for clients...");
+            System.out.print("Waiting for clients...");
             Socket clientSocket = serverSocket.accept();
-            System.out.println("Client connected.\n");
+            System.out.println("\nClient connected.\n");
             duplexer = new Duplexer(clientSocket);
             
             String message = ""; 
@@ -38,6 +40,7 @@ public class CookieClickerServer {
                 else if(message.equals("cursor")){ // Adds one to cookies every second for 20
                     if(this.cookies >= 20){
                         this.cookies -= 20;
+
 
                         Thread cursor = new Thread(() -> {
                             while(true){
