@@ -68,6 +68,58 @@ The WordDump file has all the names of students and SIleaders. The client choose
 add more names if you like. 
 
 Hint: The file only has one line, so you only need to read a line once, and then go from there.
+
+Expected Client Output (names are random):
+Client
+Connected to localhost:54321
+Received STUDENT!
+        ...sent Makenna
+Received SIleader!
+        ...sent Jared
+Received STUDENT!
+        ...sent Nhi
+Received SIleader!
+        ...sent Jared
+Received STUDENT!
+        ...sent James
+Received SIleader!
+        ...sent Philip
+Received STUDENT!
+        ...sent Raafay
+Received SIleader!
+        ...sent Asha
+Received STUDENT!
+        ...sent Aman
+Received SIleader!
+        ...sent Alice
+All work and no play makes Makenna a dull boy. All work and no play makes Jared a dull boy. All work and no play makes Nhi a dull boy. All work and no play makes Jared a dull boy. All work and no play makes James a dull boy. All work and no play makes Philip a dull boy. All work and no play makes Raafay a dull boy. All work and no play makes Asha a dull boy. All work and no play makes Aman a dull boy. All work and no play makes Alice a dull boy.
+
+Expected Server Output:
+Server
+Listening on port 54321
+Waiting for a client ....
+ Client Connected
+        ...sent STUDENT
+Received Makenna!
+        ...sent SIleader
+Received Jared!
+        ...sent STUDENT
+Received Nhi!
+        ...sent SIleader
+Received Jared!
+        ...sent STUDENT
+Received James!
+        ...sent SIleader
+Received Philip!
+        ...sent STUDENT
+Received Raafay!
+        ...sent SIleader
+Received Asha!
+        ...sent STUDENT
+Received Aman!
+        ...sent SIleader
+Received Alice!
+All work and no play makes Makenna a dull boy. All work and no play makes Jared a dull boy. All work and no play makes Nhi a dull boy. All work and no play makes Jared a dull boy. All work and no play makes James a dull boy. All work and no play makes Philip a dull boy. All work and no play makes Raafay a dull boy. All work and no play makes Asha a dull boy. All work and no play makes Aman a dull boy. All work and no play makes Alice a dull boy.
 ----------------------------------------------------------------------------------------
 3: PARALLEL SEARCHING
 The point of Threads is that it can run multiple lines of code all at once. This is useful for things like 
