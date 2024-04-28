@@ -34,7 +34,7 @@ public class TrafficLight implements Runnable{
                 case YELLOW:
                     color = LightColor.RED;
                     System.out.println(name + " is RED");
-                    key.notifyAll();  // Notify other traffic light to change state
+                    key.notifyAll();  // Notify other traffic light to start cycle
                     key.wait();       // Wait for other traffic light to complete its cycle
                     break;
             }

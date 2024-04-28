@@ -1,0 +1,18 @@
+GCIS-124 SI Mock Practicum
+Time: 40 Minutes (you have way longer to do your real final practicum)
+
+Welcome! You may do each problem in any order as you please. I would suggest you do the questions
+that cover topics you are not familiar with FIRST. Get some practice with the hard stuff first. 
+
+This session is a SAFE SPACE to get things wrong. When learning new concepts, since you are human 
+you will definitely get things wrong. You might as well get it wrong at the SI Session instead of 
+the real test. So give the frustrating questions a shot and ask your group table or us for help! 
+
+Also I added points for you to grades yourselves!
+
+------- ^ READ THIS TEXT ABOVE QUICKLY FIRST ^ -------
+
+Format:
+1: Traffic Lights w/ Threads (30 Points)
+2: Server & Client Stuff (35 Points)
+3: Sorting w/ Threads (30 Points)
