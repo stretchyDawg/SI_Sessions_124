@@ -16,3 +16,93 @@ Format:
 1: Traffic Lights w/ Threads (30 Points)
 2: Server & Client Stuff (35 Points)
 3: Sorting w/ Threads (30 Points)
+
+—--------------------------------------------------------------------------------------
+1: TRAFFIC LIGHTS 
+(I would recommend using the doc for this question as it has helpful images)
+
+Imagine a four-way intersection. The traffic lights are perpetually running in a cycle. To avoid crashes, 
+when the lights going north to south are green then the lights going from east to west would be red, and 
+vice versa.
+
+You will code this using threads and synchronization. The ‘shared resource’ in this case is the 
+intersection, although you don’t need to represent it in code. When lights facing north/south go through 
+the GREEN -> YELLOW -> RED cycle, it will stay red and the lights facing east/west will begin their 
+cycle. Once the east/west lights hit red, the north/south lights will begin.
+
+For this problem, you will create 2 traffic lights that will simulate this behavior. Before messing with 
+threads, create a LightColor.java enum that declares RED, YELLOW and GREEN, and a TrafficLight.java class 
+that has a LightColor color field and a String name field (you may have to add more fields later on once 
+you start implementing threads). 
+
+Have the North/South light begin its cycle. Once it hits red, start the East/West cycle and have the 
+North/South cycle stay on red and wait until the East/West cycle finishes. To have it be more realistic, 
+when any light changes color, have it wait 1 second (if this confuses you feel free to ask us).
+
+Expected outcome:
+North/South Light is GREEN
+North/South Light is YELLOW
+North/South Light is RED
+East/West Light is GREEN
+East/West Light is YELLOW
+East/West Light is RED
+North/South Light is GREEN
+North/South Light is YELLOW
+... (continues on forever)
+----------------------------------------------------------------------------------------
+2: THE SHINING
+The Shining is a movie (Hope you knew that). But today it's a game. It involves filling placeholders to 
+complete the legendary sentence "All work and no play makes Jack a dull boy". Look at the myStory.txt 
+file. You will see that instead of Jack or any other name, it says STUDENT or SIleader. 
+
+You will write a ShiningServer, that will read through the txt file (it only has one line) and when it 
+sees a placeholder word like STUDENT or SIleader, it will send it to ShiningClient, and the ShiningClient 
+will reply with "Harry" or "Faria" depending on what the server asked for. And then once you have the 
+name "Faria", you have to replace the placeholder and print to output that "All work and no play makes 
+Faria a dull boy". Sorry I made this all about myself. 
+
+The ShiningClient is complete and written for you. It waits for the server to say "DONE" when its done 
+reading the file. So you must implement that on the server side. 
+
+The WordDump file has all the names of students and SIleaders. The client chooses a random name. You can 
+add more names if you like. 
+
+Hint: The file only has one line, so you only need to read a line once, and then go from there.
+----------------------------------------------------------------------------------------
+3: PARALLEL SEARCHING
+The point of Threads is that it can run multiple lines of code all at once. This is useful for things like 
+searches in really really big data sets (this is kind of how search engines work, but they’re a bit more
+ complicated). Basically, you split the data you’re searching in two (or more) halves and have the threads 
+ search each half at the same time. The time it takes should theoretically be cut in half… (this is not the 
+ case with int arrays in Java due to how much longer Thread code takes to run than regular code, but the 
+ theory still applies, it’s usually used in databases).
+
+You have been provided an ArrayGenerator.java class that generates arrays of a given length with random values 
+in a given range. Experiment with it if you’d like. 
+
+Create a ParallelSearch.java class that has a main() method and a doParallelSearch static method that takes 
+in an int[] array and an int target. If it finds the target value, it will print the index and target value 
+(see expected outcome below), if not it will print “Target value not found!”. Inside the method, have it split 
+the data in 2 halves (+5 bonus points if you split it in thirds or fourths). Have 2 separate threads conduct 
+linear searches on each half and, once one finds the target value, have it print the index and target value.
+
+Additionally create a doLinearSearch static method that takes in the same parameters and prints the same 
+message. 
+
+In the main() method, create a random array of length 100,000,000 with a range of values between 0 and 
+100,000,000. Declare a target value of 8,008,135. Conduct a regular linear search for the target and then 
+conduct your parallel search.
+
+Expected Outcomes:
+    Found target:
+    [PARALLEL SEARCH]: Found target value 8008135 at index 150277135.
+    [LINEAR SEARCH]: Found target value 8008135 at index 150277135.
+
+    Unfound target:
+    [PARALLEL SEARCH]: Target value not found!
+    [LINEAR SEARCH]: Target value not found!
+
+    Weird things can happen like both halves finding the value, this is fine:
+    [PARALLEL SEARCH]: Found target value 8008135 at index 7077489.
+    [PARALLEL SEARCH]: Found target value 8008135 at index 241512726.
+    [LINEAR SEARCH]: Found target value 8008135 at index 7077489.
