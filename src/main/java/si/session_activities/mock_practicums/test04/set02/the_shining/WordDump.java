@@ -17,7 +17,7 @@ public class WordDump {
      * A selection of possible students used to fill in student blanks.
      */
     public static final String[] STUDENTS = {
-        "Harry", "Ron","Hermoine", "George", "Fred", "Ginny", "Draco", "Luna", "Neville", "Mundungus"
+        "Makenna", "Sonia", "Raafay", "Katie", "Kaden", "Aman", "Nhi", "Minh", "Emmalee", "Michael", "Jameson", "James"
     };
 
     /**

@@ -1,11 +1,7 @@
-package si.session_activities.mock_practicums.test04.set02.the_shining;
-
 import java.io.IOException;
 import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.Random;
-
-import si.review.networking_review.duplexer.Duplexer;
 
 public class ShiningClient {
     private Duplexer duplexer;
