@@ -31,6 +31,7 @@ public class CookieClickerServer {
             while(!message.equals("exit")){
                 message = duplexer.read();
                 message = message.toLowerCase();
+                
                 if(message.equals("help")){
                     System.out.println("\nCommands: \n\t" + 
                         "\"click\" - Clicks the cookie.\n\t" + 
