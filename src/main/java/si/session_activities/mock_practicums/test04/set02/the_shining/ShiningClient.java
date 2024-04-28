@@ -1,3 +1,5 @@
+package si.session_activities.mock_practicums.test04.set02.the_shining;
+
 import java.io.IOException;
 import java.net.Socket;
 import java.net.UnknownHostException;
@@ -17,8 +19,6 @@ public class ShiningClient {
         Random random = new Random();
         String rep = duplexer.read();
         while (!rep.equals("DONE")){
-            Thread.sleep(1000);
-            //rep = rep.toUpperCase();
             System.out.println("Received " + rep +"!");
             String[] out = WordDump.PLACEHOLDERS.get(rep);
             int num = random.nextInt(out.length);

@@ -1,3 +1,5 @@
+package si.session_activities.mock_practicums.test04.set02.the_shining;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
