@@ -22,17 +22,18 @@ public class TrafficLight implements Runnable{
 
     private void cycleLight() throws InterruptedException {
         synchronized (key) {
-            switch (color) { // <-- these are switch cases, a better alternative to if statements (you were taught them in class, but they were rarely used)
+            switch (this.color) { // <-- these are switch cases, a better alternative to if statements (they're faster)
+                             // (you were taught them in class, but they were rarely used)
                 case RED:
-                    color = LightColor.GREEN;
+                    this.color = LightColor.GREEN;
                     System.out.println(name + " is GREEN");
                     break;
                 case GREEN:
-                    color = LightColor.YELLOW;
+                    this.color = LightColor.YELLOW;
                     System.out.println(name + " is YELLOW");
                     break;
                 case YELLOW:
-                    color = LightColor.RED;
+                    this.color = LightColor.RED;
                     System.out.println(name + " is RED");
                     key.notifyAll();  // Notify other traffic light to start cycle
                     key.wait();       // Wait for other traffic light to complete its cycle

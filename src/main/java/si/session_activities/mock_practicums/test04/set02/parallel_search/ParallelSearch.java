@@ -38,7 +38,7 @@ public class ParallelSearch {
     public static void doLinearSearch(int[] intArray, int target){
         boolean found = false;
         int index = -1;
-        for(int integer : intArray){
+        for(int integer : intArray){ // Probably should've use a C for loop here
             index++;
             if(integer == target){
                 found = true;

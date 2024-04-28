@@ -98,7 +98,7 @@ Expected Server Output:
 Server
 Listening on port 54321
 Waiting for a client ....
- Client Connected
+Client Connected
         ...sent STUDENT
 Received Makenna!
         ...sent SIleader
