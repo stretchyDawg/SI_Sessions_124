@@ -21,11 +21,11 @@ public class ArrayGenerator {
 
     public static void main(String[] args) {
         int[] randomArray = generateRandomArray(1000000, 0, 10000000); // Array of 1,000 elements ranging from 0 to 100
-        // int index = 0;
-        // for(int num : randomArray){
-        //     System.out.println(index + ": " + num);
-        //     index++;
-        // }
+        int index = 0;
+        for(int num : randomArray){
+            System.out.println(index + ": " + num);
+            index++;
+        }
         System.out.println("Array generated with size: " + randomArray.length);
     }
 }

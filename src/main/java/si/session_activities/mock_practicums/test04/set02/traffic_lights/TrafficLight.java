@@ -48,7 +48,7 @@ public class TrafficLight implements Runnable{
         Thread light2 = new Thread(new TrafficLight("East/West Light", key));
 
         light1.start();
-        Thread.sleep(3000);  // Sleep for 1 second before changing light again
+        Thread.sleep(3000);  // Sleep for 3 second before changing light again
         light2.start();
     }
 }
