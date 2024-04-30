@@ -23,7 +23,7 @@ public class TrafficLight implements Runnable{
     private void cycleLight() throws InterruptedException {
         synchronized (key) {
             switch (this.color) { // <-- these are switch cases, a better alternative to if statements (they're faster)
-                             // (you were taught them in class, but they were rarely used)
+                                  // (you were taught them in class, but they were rarely used)
                 case RED:
                     this.color = LightColor.GREEN;
                     System.out.println(name + " is GREEN");
